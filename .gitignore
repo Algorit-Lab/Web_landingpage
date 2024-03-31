@@ -2,4 +2,9 @@
 node_modules/
 */node_modules/
 public/image/upload/
+public/css
+scss/*.css
+scss/*.css.map
+scss/**/*.css
+scss/**/*.css.map
 !public/image/upload/HOLDER

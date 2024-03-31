@@ -1,0 +1,60 @@
+<div class="container-fluid products w-85">
+	<div class="products-title fs-2 fw-bold">
+		<p>Products</p>
+	</div>
+	<div class="products-description fs-5">
+		<p>MVTec is a leading international manufacturer of software for machine vision. MVTec products are used in <a href="#">all demanding areas of imaging</a> and enable new automation solutions for the Industrial Internet of Things by providing <a href="#">high-end technologies</a> like 3D vision, deep learning, and embedded vision. Machine vision software from MVTec is developed and designed right at the headquarters in Munich, Germany.
+		</p>
+	</div>
+	
+	<div class="products-list row g-0 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
+		<a href="#" class="products-teaser products-teaser-top bg-orange col-sm-1 col-md-1 col-lg-2 ">
+			<div class="products-teaser-wrap row">
+				<div class="products-teaser-top-img col z-2">
+					<img src="https://www.mvtec.com/fileadmin/Redaktion/07_software_boxes/softwarebox_halcon_progress_runner.png" width="407" height="543" alt="">
+				</div>
+				<div class="teaser-info col">
+					<div class="product-logo">
+						<img src="<%= products[0].logo %>" alt="">
+					</div>
+					<div class="product-version text-orange fs-5">
+						<p><%= products[0].version %></p>
+					</div>
+					<div class="product-description fs-6 fw-bold">
+						<p><%= products[0].description %></p>
+					</div>
+					<div class="product-redict text-orange">
+						<!-- &lt; => '<', &gt; => '>' -->
+						<p><%= products[0].redict_text %> <%- include('link_animation.ejs') %></p>
+					</div>
+				</div>
+			</div>
+		</a>
+		<a href="#" class="products-teaser bg-bluesky col-sm-1 col-md-1 ">
+			<div class="teaser-info col">
+				<div class="product-logo">
+					<img src="<%= products[1].logo %>" alt="">
+				</div>
+				<div class="product-description fs-6 fw-bold">
+					<p><%= products[1].description %></p>
+				</div>
+				<div class="product-redict text-bluesky">
+					<p><%= products[1].redict_text %> <%- include('link_animation.ejs') %></p>
+				</div>
+			</div>
+		</a>
+		<a href="#" class="products-teaser bg-darkgreen col-sm-1 col-md-1 ">
+			<div class="teaser-info col">
+				<div class="product-logo">
+					<img src="<%= products[2].logo %>" alt="">
+				</div>
+				<div class="product-description fs-6 fw-bold">
+					<p><%= products[2].description %></p>
+				</div>
+				<div class="product-redict text-darkgreen">
+					<p><%= products[2].redict_text %> <%- include('link_animation.ejs') %></p>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>

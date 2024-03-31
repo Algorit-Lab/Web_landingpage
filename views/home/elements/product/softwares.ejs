@@ -1,0 +1,58 @@
+<style>
+    .portfolio .title{
+        margin-top: 2rem;
+    }
+</style>
+
+<div class="container-fluid portfolio">
+    <h2 class="title">MVTec's product portfolio</h2>
+    <p class="description">MVTec products are used in tens of thousands of applications in all demanding areas of imaging. Machine vision software from MVTec is invariably developed and manufactured right at the competence center in Munich.</p>
+    <h3>What are you looking for?</h3>
+    <div class="row">
+        <div class="col-md-4 col-sm-12 col-lg-4">
+            <a class="story" href="#">
+                <div class="card">
+                    <img src="<%= softwares[0].image %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4><%= softwares[0].title %></h4>
+                        <div>
+                            <p class="card-text"
+                                style="white-space: nowrap;overflow: hidden !important;text-overflow: ellipsis;">
+                                <%= softwares[0].description %>    </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-4">
+            <a class="story" href="#">
+                <div class="card">
+                    <img src="<%= softwares[1].image %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4><%= softwares[1].title %></h4>
+                        <div>
+                            <p class="card-text"
+                                style="white-space: nowrap;overflow: hidden !important;text-overflow: ellipsis;">
+                                <%= softwares[1].description %>    </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-4">
+            <a class="story" href="#">
+                <div class="card">
+                    <img src="<%= softwares[2].image %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4><%= softwares[2].title %></h4>
+                        <div>
+                            <p class="card-text"
+                                style="white-space: nowrap;overflow: hidden !important;text-overflow: ellipsis;">
+                                <%= softwares[2].description %>    </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>

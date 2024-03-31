@@ -49,7 +49,8 @@ app.use(fileUpload());
 // app.use("/middleware", require("./middleware/login"));
 // Setup router
 app.use('/', require('./routes/home'));
-app.use("/blog", require("./routes/blog"));
-// app.use("/product", require("./routes/product"));
+// app.use("/blog", require("./routes/blog"));
+app.use("/product", require("./routes/product"));
+app.use("/template", require("./routes/template"));
 app.use("/admin", require("./routes/admin"));
 app.use("/talk", require("./middleware/talk"));

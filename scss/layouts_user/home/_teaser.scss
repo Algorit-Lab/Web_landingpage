@@ -1,0 +1,63 @@
+.teaser {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.teaser-content {
+    position: relative;
+    width: 49.5%;
+    overflow: hidden;
+    min-width: 450px;
+    height: 450px;
+}
+
+.layer {
+    position: absolute;
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+}
+
+.teaser-content:hover>a .layer {
+    transform: scale(1.2);
+    transition: all .5s;
+}
+
+.box {
+    opacity: 80%;
+    height: 100%;
+}
+
+.dark_blue {
+    background-color: #062d64;
+}
+
+.teaser-text {
+    opacity: 100%;
+}
+
+.teaser-redict {
+    position: relative;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 500px) {
+    .teaser .dark_blue {
+        width: 100% !important;
+        height: 75% !important;
+    }
+    
+    .teaser-content {
+        margin-bottom: 10px;
+    }
+    
+    .teaser-text {
+        width: 90%;
+    }
+}

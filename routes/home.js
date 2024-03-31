@@ -41,20 +41,20 @@ router.get("/", (req, res) => {
 
     const stories = [
         {
-            image : 'https://www.mvtec.com/fileadmin/_processed_/6/1/csm_2023.11.09_success_story_mvtec_inndeo_1_adcb6aef14.webp',
-            tag: ['Food & Beverages', 'Deep Learning','OCR OCV'],
+            image: 'https://www.mvtec.com/fileadmin/_processed_/6/1/csm_2023.11.09_success_story_mvtec_inndeo_1_adcb6aef14.webp',
+            tag: ['Food & Beverages', 'Deep Learning', 'OCR OCV'],
             title: 'Machine vision and deep learning detect defects in the food industry',
             description: 'Automation specialist INNDEO has developed a sophisticated automation solution for quality control in the packaging industry. Thanks to machine vision and deep learning technologies, high speeds and defect detection rates are no longer a problem.',
         },
         {
-            image : 'https://www.mvtec.com/fileadmin/_processed_/6/1/csm_2023.11.09_success_story_mvtec_inndeo_1_adcb6aef14.webp',
-            tag: ['Food & Beverages', 'Deep Learning','OCR OCV'],
+            image: 'https://www.mvtec.com/fileadmin/_processed_/6/1/csm_2023.11.09_success_story_mvtec_inndeo_1_adcb6aef14.webp',
+            tag: ['Food & Beverages', 'Deep Learning', 'OCR OCV'],
             title: 'Machine vision and deep learning detect defects in the food industry',
             description: 'Automation specialist INNDEO has developed a sophisticated automation solution for quality control in the packaging industry. Thanks to machine vision and deep learning technologies, high speeds and defect detection rates are no longer a problem.',
         },
         {
-            image : 'https://www.mvtec.com/fileadmin/_processed_/6/1/csm_2023.11.09_success_story_mvtec_inndeo_1_adcb6aef14.webp',
-            tag: ['Food & Beverages', 'Deep Learning','OCR OCV'],
+            image: 'https://www.mvtec.com/fileadmin/_processed_/6/1/csm_2023.11.09_success_story_mvtec_inndeo_1_adcb6aef14.webp',
+            tag: ['Food & Beverages', 'Deep Learning', 'OCR OCV'],
             title: 'Machine vision and deep learning detect defects in the food industry',
             description: 'Automation specialist INNDEO has developed a sophisticated automation solution for quality control in the packaging industry. Thanks to machine vision and deep learning technologies, high speeds and defect detection rates are no longer a problem.',
         },
@@ -62,21 +62,21 @@ router.get("/", (req, res) => {
 
     const news = [
         {
-            image : 'https://media.licdn.com/dms/image/D4E22AQFjoXrDPse3ZA/feedshare-shrink_800/0/1690375831180?e=2147483647&v=beta&t=rr0RXjpQYbQcAw0YN41ubiVUTGoemSS7VkXHhS5I2Z4',
+            image: 'layouts_user/image/next_icon.png',
             time: 'February 2, 2024',
             tag: 'HALCON, Certified Integration Partner',
             title: 'MVTec welcomes Vision On Line as a new partner',
             description: 'MVTec is pleased to collaborate with Vision On Line, a company specializing in automation solutions based on image processing. Together, they optimize production processes using advanced machine vision, robotics, and automation technologies.',
         },
         {
-            image : 'https://media.licdn.com/dms/image/D4E22AQFjoXrDPse3ZA/feedshare-shrink_800/0/1690375831180?e=2147483647&v=beta&t=rr0RXjpQYbQcAw0YN41ubiVUTGoemSS7VkXHhS5I2Z4',
+            image: 'layouts_user/image/next_icon.png',
             time: 'February 2, 2024',
             tag: 'HALCON, Certified Integration Partner',
             title: 'MVTec welcomes Vision On Line as a new partner',
             description: 'MVTec is pleased to collaborate with Vision On Line, a company specializing in automation solutions based on image processing. Together, they optimize production processes using advanced machine vision, robotics, and automation technologies.',
         },
         {
-            image : 'https://media.licdn.com/dms/image/D4E22AQFjoXrDPse3ZA/feedshare-shrink_800/0/1690375831180?e=2147483647&v=beta&t=rr0RXjpQYbQcAw0YN41ubiVUTGoemSS7VkXHhS5I2Z4',
+            image: 'layouts_user/image/next_icon.png',
             time: 'February 2, 2024',
             tag: 'HALCON, Certified Integration Partner',
             title: 'MVTec welcomes Vision On Line as a new partner',
@@ -110,7 +110,7 @@ router.get("/", (req, res) => {
             description: 'Learn how to use the new features of the easy-to-use software MERLIC with hands-on technical demonstrations. Join the webinar on the release day of MERLIC 5.5!',
         },
     ]
-    res.render('home/pages/home', { title: 'Home', teasers: teasers, products: products, stories: stories, news: news, events: events });
+    res.render('home/pages/home', { title: 'Algorit Technology', teasers: teasers, products: products, stories: stories, news: news, events: events });
 });
 
 module.exports = router;

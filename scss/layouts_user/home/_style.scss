@@ -1,0 +1,259 @@
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-fluid {
+    width: 85%;
+}
+.nav-top, .nav-bottom{
+    margin-top: -2rem;
+}
+.header .nav-item .nav-link, .nav-bottom .dropdown-item{
+    color: #062d64;
+}
+.nav-top .nav-item{
+    margin-right: 3rem;
+}
+.nav-bottom .nav-item .nav-link:hover {
+    border-bottom: 0.125rem solid #fbba00;
+}
+
+.nav-bottom .dropdown:hover .dropdown-menu-level1{
+    display:block;
+    top: 6.5rem; left: 0;
+}
+
+.slider .carousel-item img{
+    min-width: 1000px;
+}
+
+.slider .carousel-caption{
+    margin-bottom: 7rem;
+    text-align: left;
+}
+.slider .carousel-caption h2{
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 6rem;
+}
+.slider .carousel-caption span{
+    color: #fbba00;
+}
+.slider .carousel-caption p{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* .slider a:hover{
+    transform: scale(1.2);
+	transition: all .5s;
+} */
+
+.stories h3{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #062d64;
+    margin-bottom: 1.2rem;
+}
+.stories .row{
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.stories .nav{
+    font-weight: bold;
+    color:#a3a5a7;
+    font-size: 1.2rem;
+}
+.stories li{
+    margin-right: 1rem;
+}
+.stories h4{
+    font-weight: bold;
+    color: #062d64;
+    font-size: 1.3rem;
+}
+.frame-text{
+    position: relative;
+}
+.frame-text p{
+    display: inline;
+}
+.frame-text span{
+    position: absolute;
+}
+
+.job-offer {
+    position: relative;
+    margin-top: 8rem;
+}
+.job-offer-bg{
+    position: absolute;
+    background-image: url('https://www.mvtec.com/fileadmin/_processed_/c/c/csm_drew-beamer-9uX5cX1l3bw-unsplash_4a143bcf20.webp');
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    z-index: 1;
+}
+.job-offer-color-bg{
+    position: absolute;
+    background-color:#062d64;
+    opacity: 0.8;
+    height: 100%;
+    z-index: 2;
+}
+.job-offer-content{
+    display: flex;
+}
+.job-offer-img{
+    position: relative;
+    z-index: 3;
+}
+.job-offer-text{
+    z-index: 3;
+    margin: 2rem 2rem;
+}
+@media (max-width: 800px) {
+    .job-offer-img{
+        display: none;
+    }
+}
+
+.news-events{
+    margin-top: 4rem;
+}
+.card{
+    border: none;
+}
+.news-events h3{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #062d64;
+    margin-bottom: 1.2rem;
+}
+.news-events .col-events .card{
+    margin-bottom: 1.2rem;
+}
+.news-events h5{
+    color: #062d64;
+    font-weight: bold;
+}
+.news-events .time{
+    color: black;
+}
+.news-events .card span{
+    color: #a3a5a7;
+}
+
+@media (max-width: 767px) {
+    .col-events{
+        margin-top: 3rem;
+    }
+}
+
+ul{
+    list-style: none;
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer{
+    margin-top: 5rem;
+}
+.top-footer{
+    position: relative;
+    min-height: 22rem;
+}
+.footer-bg{
+    position: absolute;
+    background-image: url('https://www.mvtec.com/typo3conf/ext/mvtec/Resources/Public/Images/Assets/footerBg.png');
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    z-index: 1;
+}
+.footer-color-bg{
+    background-color:#062d64;
+    z-index: 2;
+    opacity: 0.5;
+    position: absolute;
+    height: 100%;
+}
+.top-footer .nav-link{
+    color: white;
+    text-transform: uppercase;
+}
+
+.top-footer .navbar-nav {
+    width: 100%;
+    margin-top: 3rem;
+    z-index: 3;
+}
+.top-footer ul {
+    width: 20%; 
+}
+.top-footer a{
+    display: inline;
+}
+
+@media (max-width: 1200px) {
+    .top-footer{
+        display: none;
+    }
+}
+
+.sub-footer{
+    margin-top: 1rem;
+}
+.sub-footer ul{
+    display: flex;
+}
+.sub-footer li{
+    margin-right: 1.5rem;
+}
+.sub-footer a, .sub-footer p{
+    color: rgba(6, 45, 100, .5);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+.social-media{
+    margin-top: -2rem;
+}
+@media (max-width: 1100px) {
+    .social-media{
+        display: contents;
+    }
+}
+@media (max-width: 660px) {
+    .sub-footer ul{
+        display: grid;
+    }
+    .social-media{
+        display: grid;
+    }
+}
+@media (max-width: 465px){
+    .sub-footer ul{
+        position: absolute;
+        display: grid;
+        align-content: center;
+        margin: 2rem auto;
+        justify-content: end;
+    }
+    .social-media{
+        margin: -2rem auto;
+        display: block;
+    }
+}
+
+.btn-scroll{
+    position: fixed;
+    right: 65px;
+    bottom: 90px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}

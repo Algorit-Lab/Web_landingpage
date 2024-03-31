@@ -1,0 +1,39 @@
+.link_animation_left {
+    animation-name: link_off;
+    position: absolute;
+    color: orange;
+    opacity: 0%;
+    right: -105px;
+    animation-duration: 0.8s;
+}
+
+a:hover .link_animation_left {
+    animation-name: link_on;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes link_on {
+    to {
+        opacity: 100%;
+        transform: translateX(-82px);
+    }
+}
+
+@keyframes link_off {
+    from {
+        opacity: 100%;
+        transform: translateX(-82px);
+    }
+    
+    to {
+        opacity: 0%;
+        transform: translateX(0px);
+    }
+}
+
+.link_animation_right {
+    position: absolute;
+    right: -35px;
+}
