@@ -1,0 +1,71 @@
+/*--------------BUTTON-LOGIN--------------*/
+.login_btn {
+    color: blue;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+.login_btn span {
+    padding-left: 10px;
+    display: block;
+}
+
+.login_btn:hover {
+    color: cornflowerblue;
+}
+
+/*--------------BUTTON-BUY--------------*/
+.navbar_menu--buy-btn {
+    height: 25px;
+    line-height: 25px;
+    color: white;
+    background-color: navy;
+    border-radius: 30px;
+    padding-right: 28px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.navbar_menu--buy-btn span {
+    padding-left: 28px;
+    display: block;
+}
+
+.navbar_menu--buy-btn:hover {
+    background-color: cornflowerblue;
+}
+/*--------------BUTTON-SUBSCRIBE--------------*/
+#email .btn-link {
+    height: 40px;
+    line-height: 40px;
+    width: 120px;
+    color: white;
+    background-color: #14345C;
+    border-radius: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#email .btn-link span {
+    padding-left: 16px;
+    display: block;
+}
+
+#email .btn-link:hover {
+    background-color: dodgerblue;
+}
+/*--------------INPUT - EMAIL--------------*/
+#email .row input {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #a1b4da;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    color: #a1b4da;
+    width: 280px;
+    padding-left: 10px;
+}

@@ -1,0 +1,204 @@
+/*--------------BUTTON-LOGIN--------------*/
+.login_btn {
+    color: blue;
+    padding-right: 10px;
+    display: inline-block;
+}
+
+.login_btn span {
+    padding-left: 10px;
+    display: block;
+}
+
+.login_btn:hover {
+    color: cornflowerblue;
+}
+
+/*--------------BUTTON-BUY--------------*/
+.navbar_menu--buy-btn {
+    height: 25px;
+    line-height: 25px;
+    color: white;
+    background-color: navy;
+    border-radius: 30px;
+    padding-right: 28px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.navbar_menu--buy-btn span {
+    padding-left: 28px;
+    display: block;
+}
+
+.navbar_menu--buy-btn:hover {
+    background-color: cornflowerblue;
+}
+
+/*--------------BUTTON-TYPE-PRODUCTS--------------*/
+.type_products--place_holder {
+    width: 200px;
+    height: 50px;
+    display: inline-block;
+}
+
+.type_products--btn {
+    width: 180px;
+    line-height: 22px;
+    color: white;
+    background-color: lightblue;
+    border-radius: 25px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.type_products--btn span {
+    display: block;
+}
+
+.type_products--btn:hover {
+    background-color: dodgerblue;
+}
+
+/*--------------BUTTON-COMPARE-BUY-CONTACT--------------*/
+.action_product--compare--btn,
+.action_product--buy--btn,
+.customized_contact--btn {
+    height: 48px;
+    line-height: 48px;
+    width: 140px;
+    color: white;
+    background-color: gray;
+    border-radius: 25px;
+    padding-right: 12px;
+    font-size: 1.6rem;
+    text-align: center;
+    display: inline-block;
+}
+
+.acction_product--compare--btn span,
+.action_product--buy--btn span {
+    padding-left: 12px;
+    display: block;
+}
+
+.acction_product--compare--btn:hover {
+    background-color: dodgerblue;
+}
+
+.action_product--buy--btn,
+.customized_contact--btn {
+    background-color: dodgerblue;
+}
+
+.action_product--buy--btn:hover,
+.customized_contact--btn:hover {
+    background-color: deepskyblue;
+}
+
+/*--------------BUTTON-RESOURCES--WHERE-BUY--------------*/
+#resources .content .resource-1 .btn-link,
+.resource-2 .btn-link,
+.resource-3 .btn-link,
+.resource-4 .btn-link,
+.resource-5 .btn-link,
+#where-to-buy .content .buy-1 .btn-link,
+#where-to-buy .content .buy-2 .btn-link,
+#where-to-buy .content .buy-3 .btn-link {
+    height: 10px;
+    width: 250px;
+    color: dodgerblue;
+    background-color: white;
+    border-radius: 15px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#resources .content .resource-1 .btn-link:hover,
+.resource-2 .btn-link:hover,
+.resource-3 .btn-link:hover,
+.resource-4 .btn-link:hover,
+.resource-5 .btn-link:hover,
+#where-to-buy .content .buy-1 .btn-link:hover,
+#where-to-buy .content .buy-2 .btn-link:hover,
+#where-to-buy .content .buy-3 .btn-link:hover {
+    background-color: deepskyblue;
+}
+
+/*--------------BUTTON-SUBSCRIBE--------------*/
+#email .btn-link {
+    height: 40px;
+    line-height: 40px;
+    width: 120px;
+    color: white;
+    background-color: #14345C;
+    border-radius: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#email .btn-link span {
+    padding-left: 16px;
+    display: block;
+}
+
+#email .btn-link:hover {
+    background-color: dodgerblue;
+}
+
+/*--------------BUTTON - SCROLLTOTOP--------------*/
+.scroll button {
+    position: fixed;
+    right: 65px;
+    bottom: 90px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #14345C;
+    color: #14345C;
+    border: none;
+}
+
+.scroll button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+/*--------------BUTTON - CHATBOX--------------*/
+.chatbox button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 120px;
+    height: 50px;
+    background-color: #14345C;
+    border-radius: 22px;
+    color: white;
+    border: none;
+}
+
+.chatbox button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+/*--------------INPUT - EMAIL--------------*/
+#email .row input {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #a1b4da;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    color: #a1b4da;
+    width: 280px;
+    padding-left: 10px;
+}
+

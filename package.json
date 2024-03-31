@@ -1,0 +1,52 @@
+{
+  "name": "web_landing-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "install": "npm install express ejs body-parser mongoose mongodb nodemon body-parser bcrypt",
+    "build_ckeditor": "cd ckeditor5 && npm install && npm run build",
+    "scss": "node-sass --watch public/**/*.scss -o public/test.css",
+    "start": "nodemon --config nodemon.json --inspect app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ckeditor/ckeditor5-alignment": "^41.1.0",
+    "@ckeditor/ckeditor5-build-classic": "^41.1.0",
+    "@ckeditor/ckeditor5-highlight": "^41.1.0",
+    "@ckeditor/ckeditor5-image": "^41.1.0",
+    "@ckeditor/ckeditor5-remove-format": "^41.1.0",
+    "@ckeditor/ckeditor5-upload": "^41.1.0",
+    "@editorjs/editorjs": "^2.29.0",
+    "aes-js": "^3.1.2",
+    "axios": "^1.6.7",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "bootstrap": "^5.3.3",
+    "ckeditor5": "^41.1.0",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3",
+    "express-fileupload": "^1.4.3",
+    "express-partials": "^0.3.0",
+    "express-session": "^1.18.0",
+    "file": "^0.2.2",
+    "googleapis": "^133.0.0",
+    "http-proxy-middleware": "^2.0.6",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.4.0",
+    "mongoose": "^8.2.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.0",
+    "request-promise": "^4.2.6"
+  },
+  "devDependencies": {
+    "wordpress": "^1.4.2"
+  }
+}

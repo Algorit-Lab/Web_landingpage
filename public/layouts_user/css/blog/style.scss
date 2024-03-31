@@ -1,0 +1,348 @@
+:root {
+    --site-width: 1000px;
+    --module-width: 1450px;
+    --content-text-width: 1200px;
+    --product-name-width: 800px;
+    --product-img-width: 950px;
+}
+
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 2000px;
+    max-width: 2000px;
+    min-width: 1200px;
+}
+
+
+/*=======================BLOG-PAGE========================*/
+.wrapper {
+    margin-top: 50px;
+    height: 75px;
+    line-height: 75px;
+}
+
+.wrapper ul {
+    padding-left: 21rem;
+    position: relative;
+}
+
+.wrapper ul li a {
+    margin-left: 40px;
+    float: left;
+    font-size: 20px;
+    color: #14345C;
+}
+
+.wrapper ul li .btn-link {
+    margin-left: 240px;
+}
+
+.posts {
+    /* height: 1980px; */
+    position: relative;
+}
+
+.posts .content {
+    margin: 2.8rem calc((100% - 960px)/2);
+    height: 360px;
+    width: 960px;
+    border: 0.8px solid gainsboro;
+    display: flex;
+}
+
+.img-post {
+    margin-right: 25px;
+    height: 100%;
+    width: 48rem;
+}
+
+.posts .content .info {
+    padding: 2rem 2rem;
+}
+
+.datetime-reading a,
+.datetime-reading span {
+    font-size: 12px;
+    color: #284f7e;
+}
+
+.datetime-reading span {
+    margin-left: 1rem;
+}
+
+#share {
+    margin-left: 17rem;
+    background-color: white;
+    color: #284f7e;
+    border: none;
+}
+
+#share:hover {
+    cursor: pointer;
+}
+
+.info h4 {
+    margin-top: 1rem;
+    font-size: 25px;
+    font-weight: bold;
+    color: #14345C;
+    letter-spacing: 0.8px;
+}
+
+.info p {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    color: #14345C;
+}
+
+.border {
+    list-style: none;
+    border: 1px solid gainsboro;
+    margin-top: 7rem;
+}
+
+.interact {
+    margin-top: 1.2rem;
+    display: flex;
+}
+
+.interact span {
+    font-size: 12.5px;
+    margin-right: 1rem;
+    opacity: 0.6;
+}
+
+.interact a {
+    margin-right: 26rem;
+    color: black;
+}
+
+#love {
+    background-color: white;
+    color: red;
+    border: none;
+}
+
+#love:hover {
+    cursor: pointer;
+}
+
+.posts .buttons {
+    justify-content: center;
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    position: relative;
+}
+
+.posts .buttons button {
+    background-color: white;
+    color: #14345C;
+    border: none;
+}
+
+.posts .buttons button#backward {
+    margin-right: 30px;
+}
+
+.posts .buttons button#prev {
+    margin-right: 30px;
+}
+
+.posts .number {
+    color: #14345C;
+}
+
+.number li {
+    float: left;
+    list-style: decimal;
+    font-size: 15px;
+    width: 40px;
+    margin-left: 25px;
+}
+
+.posts .buttons button#foward {
+    margin-left: 30px;
+}
+
+.posts .buttons button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.posts .number li:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+
+/*=======================BLOG/POST-PAGE========================*/
+.post-detail {
+    border: 1px solid #284f7e;
+    width: 98rem;
+    /* height: 120rem; */
+    margin: 2rem calc((100% - 98rem)/2);
+}
+
+.datetime-reading-detail {
+    margin: 4rem 8rem;
+}
+
+.datetime-reading-detail span,
+.datetime-reading-detail a {
+    font-size: 13px;
+    color: #284f7e;
+    margin-right: 1rem;
+}
+
+.datetime-reading-detail #share {
+    margin-left: 50rem;
+}
+
+.post-detail .content {
+    margin: 4rem 8rem;
+}
+
+.title {
+    font-size: 3.1rem;
+    color: #14345C;
+    margin-bottom: 2rem;
+}
+
+.updated,
+.post-detail p {
+    font-size: 15px;
+    color: #14345C;
+    margin-bottom: 2rem;
+}
+
+.post-content .line-top {
+    margin-top: 6rem;
+}
+
+.post-content .line-top,
+.line-bottom {
+    list-style: none;
+    border: 1px solid gainsboro;
+}
+
+.post-content button {
+    margin: 2rem 1.3rem;
+    background-color: white;
+    color: #14345C;
+    border: none;
+}
+
+.post-content button:hover {
+    cursor: pointer;
+    color: #3468a7;
+}
+
+.interact-post {
+    margin-top: 2rem;
+}
+
+.interact-post span {
+    font-size: 1.8rem;
+    margin-right: 2rem;
+    color: #455870;
+}
+
+.interact-post #love {
+    margin-left: 55rem;
+}
+
+.recent-posts {
+    margin: 4rem 28rem;
+    position: relative;
+}
+
+.recent-posts h4 {
+    float: left;
+    margin-right: 80rem;
+    font-size: 1.8rem;
+    color: #455870;
+}
+
+.recent-posts span {
+    font-size: 1.7rem;
+    color: #455870;
+}
+
+.recent-post-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.recent-post-box {
+    margin-top: 2.4rem;
+    border: 1px solid #284f7e;
+    height: 30.13rem;
+    width: 30rem;
+}
+
+.post-img-wrapper {
+    width: 30rem;
+    height: 16.1rem;
+    background-color: #14345C;
+}
+
+.post-img-wrapper img {
+    width: 30rem;
+}
+
+.post-img-wrapper h4 {
+    margin: 2.8rem 2.5rem;
+    font-size: 1.8rem;
+    font-weight: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 25rem;
+    height: 3.8rem;
+    white-space: nowrap;
+}
+
+.post-img-wrapper .line {
+    margin: 8rem 2.5rem;
+    list-style: none;
+    border: 1px solid gainsboro;
+}
+
+.recent-post-box button {
+    margin-left: 2.5rem;
+    background-color: white;
+    color: #14345C;
+    border: none;
+}
+
+.recent-post-box #comment:hover {
+    cursor: pointer;
+    color: #3468a7;
+}
+
+.comments-wrapper {
+    border: 1px solid #284f7e;
+    width: 98rem;
+    margin: 2rem calc((100% - 98rem)/2);
+}
+
+.comments-content {
+    margin: 2rem 7rem;
+}
+
+.comments-content span {
+    font-size: 1.8rem;
+    color: #455870;
+}
+
+.comments-content .line {
+    margin-top: 2rem;
+    list-style: none;
+    border: 1px solid gainsboro;
+}
+
+#write-comment {
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+}

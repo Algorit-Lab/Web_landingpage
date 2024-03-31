@@ -1,0 +1,96 @@
+<style>
+	.teaser {
+		position: relative;
+		box-sizing: border-box;
+		overflow: hidden;
+		margin: 20px 0;
+	}
+	
+	.teaser-content {
+		position: relative;
+		width: 49.5%;
+		overflow: hidden;
+		min-width: 450px;
+		height: 450px;
+	}
+	
+	.layer {
+		position: absolute;
+		background-image: url('<%= teasers[0].image %>');
+		background-size: cover;
+		height: 100%;
+		background-position: center;
+	}
+	
+	.teaser-content:hover>a .layer {
+		transform: scale(1.2);
+		transition: all .5s;
+	}
+	
+	.box {
+		opacity: 80%;
+		height: 100%;
+	}
+	
+	.dark_blue {
+		background-color: #062d64;
+	}
+	
+	.teaser-text {
+		opacity: 100%;
+	}
+	
+	.teaser-redict {
+		position: relative;
+		display: inline-block;
+	}
+	
+	a {
+		text-decoration: none;
+	}
+	
+	@media (max-width: 500px) {
+		.teaser .dark_blue {
+			width: 100% !important;
+			height: 75% !important;
+		}
+		
+		.teaser-content {
+			margin-bottom: 10px;
+		}
+		
+		.teaser-text {
+			width: 90%;
+		}
+	}
+</style>
+
+<div class="container-fluid teaser w-100 ">
+	<div class="row g-0 row-cols-lg-2" style="gap: 1%">
+		<div class="col teaser-content">
+			<a href="#">
+				<div class="layer w-100"></div>
+				<div class="box dark_blue w-50">
+					<div class="teaser-text box p-4 pt-5 pb-5 text-wrap text-white">
+						<div class="teaser-title  fs-2 mb-3"><%= teasers[0].title %></div>
+						<div class="teaser-description fs-5"><%= teasers[0].description %></div>
+						<div class="teaser-redict fs-5 mt-4"><%= teasers[0].redict_text %><%- include('link_animation.ejs') %></div>
+					</div>
+				</div>
+				
+			</a>
+		</div>
+		<div class="col teaser-content">
+			<a href="#">
+				<div class="layer w-100"></div>
+				<div class="box dark_blue w-50">
+					<div class="teaser-text box p-4 pt-5 pb-5 text-wrap text-white">
+						<div class="teaser-title fs-3 mb-3"><%= teasers[1].title %></div>
+						<div class="teaser-description fs-5"><%= teasers[1].description %></div>
+						<div class="teaser-redict fs-5 mt-4"><%= teasers[1].redict_text %><%- include('link_animation.ejs') %></div>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,44 @@
+<div class="create_post module">
+	<form action="/admin/dashboard/store" method="post" id="write-comment">
+		<div class="row">
+			<input type="text" name="title" placeholder="Title">
+			<textarea id="editor" type="text" name="content" placeholder="Content"></textarea>
+			<input type="text" name="picture" placeholder="Picture link">
+			<button type="submit">OK</button>
+		</div>
+	</form>
+</div>
+
+<script src="/ckeditor.js"></script>
+<script>
+	ClassicEditor
+		.create(document.querySelector('#editor'), {
+			simpleUpload: {
+				// The URL that the images are uploaded to.
+				uploadUrl: '/admin/dashboard/upload/image',
+				fieldName: 'image'
+				
+			},
+			onChange: (event, editor) => {
+				const content = editor.getData();
+				
+				// Use a regex to find image URLs in the content
+				const regex = /<img.*?src=["'](.*?)["']/g;
+				let match;
+				pictureUrls = [];
+				
+				while ((match = regex.exec(content)) !== null) {
+					pictureUrls.push(match[1]);
+				}
+				
+				// Update the hidden input with the picture URLs
+				document.getElementById('pictureUrls').value = JSON.stringify(pictureUrls);
+			}
+		})
+		.then(editor => {
+			window.editor = editor;
+		})
+		.catch(err => {
+			console.error(err.stack);
+		});
+</script>

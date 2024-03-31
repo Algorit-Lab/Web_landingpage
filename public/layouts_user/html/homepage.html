@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>LIPS Corporation</title>
+    <meta charset="UtF-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="/scripts/index.js" defer></script>
+</head>
+
+<body>
+    <!--HEADER-START-->
+    <div id="header">
+        <nav class="navbar">
+            <!--Logo-->
+            <div class="navbar_logo">
+                <a href="/html/homepage.html">
+                    <img class="navbar_logo--img" src="../image/LIPS_Logo.png" alt="Lips logo">
+                </a>
+            </div>
+            <!--Login-Language-->
+            <div class="navbar_top-right">
+                <div class="navbar_login">
+                    <img src="../image/login_logo.png" height="25px" alt="login logo">
+                    <a class="login_btn btn-link" href="#"><span>Log In</span></a>
+                </div>
+                <div class="navbar_language">
+                    <img src="../image/usa.png" height="20px" alt="usa lang">
+                    <select class="navbar_language--select">
+                        <option>En</option>
+                        <option>Vie</option>
+                    </select>
+                </div>
+            </div>
+
+            <!--Menu-->
+            <div class="navbar_menu">
+                <ul class="navbar_menu--list">
+                    <li class="navbar_menu--item product"><a class="navbar_menu--item--text" href="#">Product</a></li>
+                    <li class="navbar_menu--item"><a class="navbar_menu--item--text" href="#">Solution</a></li>
+                    <li class="navbar_menu--item"><a class="navbar_menu--item--text" href="#">Developer</a></li>
+                    <li class="navbar_menu--item"><a class="navbar_menu--item--text" href="/html/blog.html">Blog</a>
+                    </li>
+                    <li class="navbar_menu--item"><a class="navbar_menu--item--text" href="#">Support</a></li>
+                    <li class="navbar_menu--item"><a class="navbar_menu--item--text" href="#">Company</a></li>
+                    <li class="navbar_menu--item cart">
+                        <a href="#"><img src="../image/cart.png" height="25px" alt="cart"></a>
+                    </li>
+                    <li class="navbar_menu--item">
+                        <a class="navbar_menu--buy-btn btn-link" href="#"><span>Buy</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="clr"></div>
+        </nav>
+    </div>
+    <!--HEADER-END-->
+
+    <!--CONTENT START-->
+    <div class="module container">
+        <div class="slide">
+            <div class="item" style="background-image: url('../image/slide.png');">
+                <div class="content">
+                    <div class="text">
+                        <p>Join LIPS to Unveil Next-Gen Edge-AI & Low-Latency 3D Robotic Vision Solution</p>
+                    </div>
+                    <div class="slide1-1"><img src="../image/slide1_01.png" alt="slide1-1"></div>
+                    <div class="slide1-2"><img src="../image/slide1_02.png" alt="slide1-2"></div>
+                    <div class="slide1-bottom">
+                        <div class="slidelogo"><img src="../image/LIPS_Logo.png" height="100px" alt="logo"></div>
+                        <div class="slide1-3"><img src="../image/slide1_03.png" alt="slide1-3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url('../image/slide.png');">
+                <div class="content">
+                    <div class="text">
+                        <h3>LIPSedge™ <br />SDK 1.x</h3>
+                        <h4>Build Once, Deploy <br />Unlimitedly</h4>
+                        <p>The use of LIPSedge™ SDK 1.x <br />simplifies the development process, <br />and speeds-up
+                            the deployment</p>
+                    </div>
+                    <div class="slide2-1"><img src="../image/slide2.png"></div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url('../image/slidebg.png');">
+                <div class="content">
+                    <div class="text">
+                        <h3>LIPSedge™ F110 3DxAI Edge Accelerator</h3>
+                        <p>World's First NVIDIA Jetson AGX Xavier-based PCIe Endpoint-mode Edge Accelerator
+                            Designed to Accelerate 3D Vision and AI Applications</p>
+                    </div>
+                    <div class="slide3-1"><img src="../image/slide3.png"> </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url('../image/slidebg.png');">
+                <div class="content">
+                    <div class="text">
+                        <h3>Most Comprehensive 3D Depth Camera & AI-based Middleware</h3>
+                        <p>Build your next 3DxAI applications with LIPS</p>
+                    </div>
+                    <div class="slide4-1"><img src="../image/slide4.png"> </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container--btn">
+            <button id="prev"><img src="../image/previous_icon.png" height="50px" alt="previous icon"> </button>
+            <button id="next"><img src="../image/next_icon.png" height="50px" alt="next icon"> </button>
+        </div>
+        <ul class="container--dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="clr"></div>
+    </div>
+
+    <div id="type-products" class="module">
+        <div class="product1"><a class="type_products--btn btn-link" href="#"><span>Active Stereo Camera</span></a>
+        </div>
+        <div class="product2"><a class="type_products--btn btn-link" href="#"><span>Time-of-Flight Camera</span></a>
+        </div>
+        <div class="product3"><a class="type_products--btn btn-link" href="#"><span>Structured-Light Camera</span></a>
+        </div>
+        <div class="product4"><a class="type_products--btn btn-link" href="#"><span>Edge <br />Accelerator</span></a>
+        </div>
+        <div class="product5"><a class="type_products--btn btn-link" href="#"><span>Multiple Dimensioning</span></a>
+        </div>
+        <div class="product6"><a class="type_products--btn btn-link" href="#"><span>Facial <br />Recognition</span></a>
+        </div>
+        <div class="product7"><a class="type_products--btn btn-link" href="#"><span>Touchless <br />Interface</span></a>
+        </div>
+        <div class="clr"></div>
+    </div>
+
+    <div id="detail-types" class="module">
+        <div class="type-product">
+            <div class="content-product">
+                <div class="name-product">
+                    <p>LIPSedge™ AE430</p>
+                </div>
+                <div class="img-product"><img src="../image/product1.png" alt="product1"> </div>
+                <div class="description-product">
+                    <p>Compact & Light-weight Ruggedized 3D Stereo Camera for Robotics & Edge-AI</p>
+                </div>
+                <div class="box" id="box-product">
+                    <ul>
+                        <li>FOV 65° x 40° x 72°</li>
+                        <li>Rolling Shutter / IMU</li>
+                        <li>Range: 0.16 ~ 10m</li>
+                    </ul>
+                </div>
+                <div class="action_product">
+                    <div class="action_product--compare"><a class="action_product--compare--btn"
+                            href="#"><span>Compare</span></a> </div>
+                    <div class="action_product--buy"><a class="action_product--buy--btn" href="#"><span>Buy</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="content-product">
+                <div class="name-product">
+                    <p>LIPSedge™ AE470</p>
+                </div>
+                <div class="img-product"><img src="../image/product2.png" alt="product2"> </div>
+                <div class="description-product">
+                    <p>Compact & Light-weight Ruggedized 3D Stereo Camera for Robotics & Edge-AI</p>
+                </div>
+                <div class="box" id="box-product">
+                    <ul>
+                        <li>FOV 65° x 40° x 72°</li>
+                        <li>Rolling Shutter / IMU</li>
+                        <li>Range: 0.16 ~ 10m</li>
+                    </ul>
+                </div>
+                <div class="action_product">
+                    <div class="action_product--compare"><a class="action_product--compare--btn btn-link"
+                            href="#"><span>Compare</span></a> </div>
+                    <div class="action_product--buy"><a class="action_product--buy--btn btn-link"
+                            href="#"><span>Buy</span></a></div>
+                </div>
+            </div>
+            <div class="content-product">
+                <div class="name-product">
+                    <p>LIPSedge™ AE400</p>
+                </div>
+                <div class="img-product"><img src="../image/product3.png" alt="product3"> </div>
+                <div class="description-product">
+                    <p>Compact & Light-weight Ruggedized 3D Stereo Camera for Robotics & Edge-AI</p>
+                </div>
+                <div class="box" id="box-product">
+                    <ul>
+                        <li>FOV 65° x 40° x 72°</li>
+                        <li>Rolling Shutter / IMU</li>
+                        <li>Range: 0.16 ~ 10m</li>
+                    </ul>
+                </div>
+                <div class="action_product">
+                    <div class="action_product--compare"><a class="action_product--compare--btn btn-link"
+                            href="#"><span>Compare</span></a> </div>
+                    <div class="action_product--buy"><a class="action_product--buy--btn btn-link"
+                            href="#"><span>Buy</span></a></div>
+                </div>
+            </div>
+
+            <div class="clr"></div>
+        </div>
+        <div class="buttons-product">
+            <button id="prev-product"><img src="../image/previous_icon.png" height="50px" alt="previous icon"> </button>
+            <button id="next-product"><img src="../image/next_icon.png" height="50px" alt="next icon"> </button>
+        </div>
+    </div>
+
+    <div id="sense-the-world" class="module">
+        <h3>Sense the World</h3>
+        <div class="pic1">
+            <img src="../image/active-stereo-vision.png" alt="active-stereo-vision">
+            <p>Active Stereo Vision</p>
+            <div class="down-icon"><img src="../image/down.png" allt="down-icon"></div>
+        </div>
+        <div class="pic2">
+            <img src="../image/time-of-flight.png" alt="time-of-flight">
+            <p>Time-of-Flight</p>
+            <div class="down-icon"><img src="../image/down.png" allt="down-icon"></div>
+        </div>
+        <div class="pic3">
+            <img src="../image/structed-light.png" alt="structed-light">
+            <p>Structured Light</p>
+            <div class="down-icon"><img src="../image/down.png" allt="down-icon"></div>
+        </div>
+        <div class="clr"></div>
+    </div>
+
+    <div id="industrial-ready" class="module">
+        <h3>Industrial Ready</h3>
+        <div class="industrial">
+            <div class="left"><img src="../image/industrial.PNG" alt="industrial"></div>
+            <div class="right"><img src="../image/industrial-product1.png" alt="product1"></div>
+        </div>
+        <div class="clr"></div>
+    </div>
+
+    <div id="robotic" class="module">
+        <div class="content1">
+            <h3>Low-Latency Robotic Vision</h3>
+            <div class="info">
+                <p>Accelerate your robotic vision with LIPSedge™ devices <br />on both x86 and ARM while fully
+                    supporting <br />industry widely used SDK and Wrappers</p>
+            </div>
+            <div class="tools">
+                <img src="../image/intel.png" alt="intel">
+                <img src="../image/halcon.png" alt="halcon">
+                <img src="../image/nvidia-jetson.png" alt="halcon"><br />
+                <img src="../image/ros.png" alt="halcon">
+                <img src="../image/sdk2.png" alt="halcon">
+                <img src="../image/nvidia-issac.png" alt="halcon">
+            </div>
+        </div>
+        <div class="content2">
+            <h3>Open-Root Edge Computing</h3>
+            <p>LIPSedge™ devices are empowered with <br />the latest Edge Computing technology, meeting next generation
+                A.I. <br />and Neural Processing demands.</p>
+            <div class="tools">
+                <img src="../image/arm.png" alt="arm">
+                <img src="../image/intel-cyclone.png" alt="intel-cyclone">
+                <img src="../image/armbarella.png" alt="armbarella">
+            </div>
+        </div>
+        <div class="clr"></div>
+    </div>
+
+    </div>
+
+    <div id="customized" class="module">
+        <h2>LIPS Customized Camera Design</h2>
+        <div class="customized_left">
+            <img src="../image/custom-design.png" alt="custom-design">
+        </div>
+        <div class="customized_right">
+            <h4>3D Camera Design</h4>
+            <ul>
+                <li>3D depth cameras includes ToF, Stereo and Structured Light(Fixed Pattern)</li>
+                <li>Edge Computing for IoT</li>
+            </ul>
+            <img src="../image/design.png" alt="design">
+            <h4>3D Middleware/Algorithm/Software</h4>
+            <ul>
+                <li>Parallel processing(OpenCL, FPGA and DSP)</li>
+                <li>Algorithms base on depth and RGB information for DL & traditional programming</li>
+                <li>Customization for all tiers</li>
+            </ul>
+            <div class="customized_contact"><a class="customized_contact--btn btn-link" href="#"><span>Contatc Us</span></a></div>
+            <div class="clr"></div>
+        </div>
+    </div>
+
+    <div id="cases" class="module">
+        <h3>Our Use Cases</h3>
+        <div class="video1"><a class="box" href="https://youtu.be/fK6WsA_kk6c"></a>
+            <p>LIPSedge™ SDK Persistent Connection For PoE and USB</p>
+        </div>
+        <div class="video2"><a class="box" href="https://youtu.be/fK6WsA_kk6c"></a>
+            <p>LIPSedge™ SDK Persistent Connection For PoE and USB</p>
+        </div>
+        <div class="video3"><a class="box" href="https://youtu.be/fK6WsA_kk6c"></a>
+            <p>LIPSedge™ SDK Persistent Connection For PoE and USB</p>
+        </div>
+        <div class="load">
+            <p>Load More</p>
+        </div>
+        <div class="clr"></div>
+    </div>
+
+    <div id="resources" class="module">
+        <h3>Developer <br /> Resources</h3>
+        <div class="content">
+            <div class="resource-1"><a class="btn-link" href="#"><img src="../image/res1-icon.png" height="55px"
+                        alt="icon"><br /><span>LIPSedge™ SDK</span></a></div>
+            <div class="resource-2"><a class="btn-link" href="#"><img src="../image/res2-icon.png" height="55px"
+                        alt="icon"><br /><span>Github</span></a></div>
+            <div class="resource-3"><a class="btn-link" href="#"><img src="../image/res3-icon.png" height="55px"
+                        alt="icon"><br /><span>Tutorials</span></a></div>
+            <div class="resource-4"><a class="btn-link" href="#"><img src="../image/res4-icon.png" height="55px"
+                        alt="icon"><br /><span>Documentation</span></a></div>
+            <div class="resource-5"><a class="btn-link" href="#"><img src="../image/res5-icon.png" height="55px"
+                        alt="icon"><br /><span>FAQs</span></a></div>
+        </div>
+        <div class="clr"></div>
+    </div>
+
+    <div id="where-to-buy" class="module">
+        <h3>Where to buy</h3>
+        <div class="content">
+            <div class="buy-1"><a class="btn-link" href="#"><img src="../image/where-buy1.png" height="55px"
+                        alt="icon"><br /><span>Buy Sample</span></a></div>
+            <div class="buy-2"><a class="btn-link" href="#"><img src="../image/where-buy2.png" height="55px"
+                        alt="icon"><br /><span>Distributors</span></a></div>
+            <div class="buy-3"><a class="btn-link" href="#"><img src="../image/where-buy3.png" height="55px"
+                        alt="icon"><br /><span>Talk to Sales</span></a></div>
+        </div>
+        <div class="clr"></div>
+    </div>
+
+    <div id="alliance-partners" class="module">
+        <h3>Alliance Partners</h3>
+        <div class="content">
+            <div class="partner-1"><a href="#"><img src="../image/partner-1.png" width="320px" alt="partner-1"></a>
+            </div>
+            <div class="partner-2"><a href="#"><img src="../image/partner-2.png" width="320px" alt="partner-2"></a>
+            </div>
+            <div class="partner-3"><a href="#"><img src="../image/partner-3.png" width="320px" alt="partner-3"></a>
+            </div>
+            <div class="partner-4"><a href="#"><img src="../image/partner-4.png" width="320px" alt="partner-4"></a>
+            </div>
+            <div class="partner-5"><a href="#"><img src="../image/partner-5.png" width="320px" alt="partner-5"></a>
+            </div>
+            <div class="partner-6"><a href="#"><img src="../image/partner-6.png" width="320px" alt="partner-6"></a>
+            </div>
+        </div>
+        <div class="clr"></div>
+    </div>
+    <!--CONTENT-END-->
+
+    <!--FOOTER-START-->
+    <div id="footer">
+        <div class="col1">
+            <h4>Product</h4>
+            <a href="#">
+                <p>3D Camera</p>
+            </a> <br />
+            <a href="#">
+                <p>3D Middleware</p>
+            </a> <br />
+            <a href="#">
+                <p>3D Application</p>
+            </a> <br />
+            <a href="#">
+                <p>3D System</p>
+            </a>
+        </div>
+        <div class="col2">
+            <h4>Support</h4>
+            <a href="#">
+                <p>Documentation</p>
+            </a> <br />
+            <a href="#">
+                <p>Help Center</p>
+            </a> <br />
+            <a href="#">
+                <p>SDK Download</p>
+            </a> <br />
+            <a href="#">
+                <p>Code Samples</p>
+            </a> <br />
+            <a href="#">
+                <p>Github</p>
+            </a>
+        </div>
+        <div class="col3">
+            <h4>#LIPS</h4>
+            <a href="#">
+                <p>About LIPS</p>
+            </a> <br />
+            <a href="#">
+                <p>Event</p>
+            </a> <br />
+            <a href="#">
+                <p>Press Release</p>
+            </a> <br />
+            <a href="#">
+                <p>Contact Us</p>
+            </a> <br />
+            <a href="#">
+                <p>Join Us</p>
+            </a>
+        </div>
+        <div class="col4">
+            <h4>Contact</h4>
+            <p>Email: </p><a href="info@lips-hci.com">info@lips-hci.com</a> <br />
+            <p>Tel: </p><a href="#">(+886) 02-8791-6998</a> <br /><br /><br />
+            <h4>Get Our Latest Updates</h4>
+            <form action="#" method="post" id="email">
+                <div class="row">
+                    <input type="text" value="Email Address" />
+                    <a class="btn-link" href="#"><span>Subscribe</span></a>
+                </div>
+            </form>
+            <br />
+            <a href="https://www.linkedin.com/uas/login?session_redirect=%2Fcompany%2F15145877%2F"><img
+                    src="../image/linkedin.png" alt="linkedin"></a>
+            <a href="https://www.facebook.com/lipshci/"><img src="../image/facebook.png" alt="facebook"></a>
+            <a href="https://www.youtube.com/channel/UCmlsps2r8FY2SHQQtM3QkmA"><img src="../image/youtube.png"
+                    alt="youtube"></a>
+            <a href="https://twitter.com/lips_corp"><img src="../image/twitter.png" alt="twitter"></a>
+        </div>
+        <div class="clr"></div>
+        <div class="scroll"><button><i class="fa-solid fa-circle-chevron-up"></i></div>
+        <div class="chatbox"><button><i class="fa-regular fa-comment-dots"></i></div>
+        <div class="copyright">
+            <p>©2023 by LIPS Corporation. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

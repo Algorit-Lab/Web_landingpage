@@ -1,0 +1,76 @@
+/*--------------BUTTON-PRODUCT-SERIES--------------*/
+.ae-button, .at-button, .m3-button, .dl-button {
+    height: 48px;
+    line-height: 48px;
+    width: 150px;
+    background-color: #2b558a;
+    font-size: 24px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.ae-button span, .at-button span, .m3-button span, .dl-button span{
+    padding-left: 16px;
+    color: white;
+    display: block;
+}
+
+.ae-button:hover, .at-button:hover, .m3-button:hover, .dl-button:hover {
+    background-color: dodgerblue;
+}
+/*--------------BUTTON-AE-SERIES--------------*/
+.ae400 a, .ae450 a{
+    height: 40px;
+    line-height: 40px;
+    width: 110px;
+    background-color: #2b558a;
+    font-size: 22px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.ae400 span, .ae450 span{
+    padding-left: 16px;
+    color: white;
+    display: block;
+}
+
+.ae400 a:hover, .ae450 a:hover {
+    background-color: dodgerblue;
+}
+/*--------------BUTTON - SCROLLTOTOP--------------*/
+.scroll button {
+    position: fixed;
+    right: 65px;
+    bottom: 90px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #14345C;
+    color: #14345C;
+    border: none;
+}
+
+.scroll button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+/*--------------BUTTON - CHATBOX--------------*/
+.chatbox button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 120px;
+    height: 50px;
+    background-color: #14345C;
+    border-radius: 22px;
+    color: white;
+    border: none;
+}
+
+.chatbox button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}

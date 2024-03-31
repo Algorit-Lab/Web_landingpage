@@ -1,0 +1,178 @@
+<style>
+	.dark_blue {
+		background-color: #062d64;
+	}
+	
+	.w-85 {
+		width: 85% !important;
+	}
+	
+	.fs-5-5 {
+		font-size: 1.125rem !important;
+	}
+	
+	.services {
+		position: relative;
+	}
+	
+	.services-1stbg {
+		background-image: url('https://www.mvtec.com/fileadmin/Redaktion/10_tiles/header_service_support_homepage.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		padding: 0;
+	}
+	
+	.services-2ndbg {
+		position: absolute;
+		opacity: 80%;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.services-content {
+		width: 85%;
+		padding-top: 90px;
+		background-size: cover;
+		position: absolute;
+		position: relative;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 90px;
+	}
+	
+	.services-title {
+		width: 45%;
+		max-width: 800px;
+	}
+	
+	.services-content-text {
+		width: 45%;
+		max-width: 800px;
+	}
+	
+	.services-wrap {
+		position: absolute;
+	}
+	
+	.services-buttons {
+		text-align: center;
+		position: relative;
+		margin-right: auto;
+		margin-left: auto;
+		place-items: center;
+		padding-bottom: 50px;
+	}
+	
+	.services-button {
+		width: 20%;
+		min-width: 200px;
+		margin: auto;
+	}
+	
+	.services-button:hover>a .services-picture img {
+		transform: scale(0.7);
+		transition: all .5s;
+	}
+	
+	.services-picture {
+		width: 130px;
+		height: 130px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	
+	.services-picture img {
+		width: 120px;
+		height: 120px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+	
+	.services a {
+		color: white;
+	}
+	
+	@media (min-width: 1200px) {
+		.services-wrap {
+			padding-top: 90px;
+			top: 0;
+			right: 0;
+		}
+	}
+	
+	@media (max-width: 1200px) {
+		.services-content-text {
+			width: 100%;
+		}
+	}
+</style>
+
+<div class="container-fluid services-1stbg services w-100 z-0">
+	<div class="services-bg services-2ndbg dark_blue z-1"></div>
+	<div class="services-block position-relative container-fluid w-85 z-2 text-white">
+		<div class="services-content">
+			<div class="services-title fw-bold fs-3">
+				<p>Our Services</p>
+			</div>
+			<div class="services-content-text fs-5">
+				<p>With a wide range of service and support options MVTec supports you to realize your machine vision task in the best possible way. The aim of our experts is to enable you to use MVTec products so you can deploy successful machine vision projects.</p>
+			</div>
+			<a href="#" class="services-wrap fs-5">
+				<p>Learn more <%- include('link_animation.ejs') %></p>
+			</a>
+		</div>
+		<div class="services-buttons w-100 row row-cols-5 row-cols-md-2 row-cols-sm-1 fw-bold fs-5">
+			<div class="services-button col">
+				<a href="#">
+					<div class="services-picture">
+						<img src="https://www.mvtec.com/fileadmin/Redaktion/02_icons/white/liste_weiss_accent.png" alt="">
+					</div>
+					<div class="services-button-title">
+						<p>Free Application Evaluation</p>
+					</div>
+				</a>
+			</div>
+			<div class="services-button col">
+				<a href="#">
+					<div class="services-picture">
+						<img src="https://www.mvtec.com/fileadmin/Redaktion/02_icons/white/barcode_weiss_gelb.png" alt="">
+					</div>
+					<div class="services-button-title">
+						<p>Feasibility Studies </p>
+					</div>
+				</a>
+			</div>
+			<div class="services-button col">
+				<a href="#">
+					<div class="services-picture">
+						<img src="https://www.mvtec.com/fileadmin/Redaktion/02_icons/white/gears_weiss_gelb.png" alt="">
+					</div>
+					<div class="services-button-title">
+						<p>Customer-Specific Projects </p>
+					</div>
+				</a>
+			</div>
+			<div class="services-button col">
+				<a href="#">
+					<div class="services-picture">
+						<img src="https://www.mvtec.com/fileadmin/Redaktion/02_icons/white/presentation_weiss_gelb.png" alt="">
+					</div>
+					<div class="services-button-title">
+						<p>Trainings & Workshops</p>
+					</div>
+				</a>
+			</div>
+			<div class="services-button col">
+				<a href="#">
+					<div class="services-picture">
+						<img src="https://www.mvtec.com/fileadmin/Redaktion/02_icons/white/webinar_weiss_gelb.png" alt="">
+					</div>
+					<div class="services-button-title">
+						<p>Videos & Tutorials</p>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

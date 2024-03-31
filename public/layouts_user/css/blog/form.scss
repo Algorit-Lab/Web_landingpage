@@ -1,0 +1,47 @@
+/*--------------INPUT - WRITE-COMMENT--------------*/
+#write-comment .row input{
+    display: inline-block;
+    height: 6rem;
+    line-height: 6rem;
+    border: 1px solid #a1b4da;
+    font-size: 1.8rem;
+    color: #455870;
+    width: 100%;
+    padding-left: 10px;
+}
+/*--------------BUTTON - SCROLLTOTOP--------------*/
+.scroll button {
+    position: fixed;
+    right: 65px;
+    bottom: 90px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #14345C;
+    color: #14345C;
+    border: none;
+}
+
+.scroll button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+/*--------------BUTTON - CHATBOX--------------*/
+.chatbox button {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 120px;
+    height: 50px;
+    background-color: #14345C;
+    border-radius: 22px;
+    color: white;
+    border: none;
+}
+
+.chatbox button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}

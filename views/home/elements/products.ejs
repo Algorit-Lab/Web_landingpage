@@ -1,0 +1,272 @@
+<style>
+	:root {
+		--color-orange: #f28d26;
+		--color-bluesky: #23a0e9;
+		--color-darkgreen: #009688;
+	}
+	
+	.text-orange {
+		color: var(--color-orange)
+	}
+	
+	.text-bluesky {
+		color: var(--color-bluesky)
+	}
+	
+	.text-darkgreen {
+		color: var(--color-darkgreen)
+	}
+	
+	.products {
+		margin-bottom: 50px;
+	}
+	
+	.products-title p {
+		color: #062d64;
+	}
+	
+	.w-85 {
+		width: 85% !important;
+	}
+	
+	.w-60 {
+		width: 60% !important;
+	}
+	
+	.h-400 {
+		height: 400px;
+	}
+	
+	.container-fluid {
+		margin-top: 30px;
+	}
+	
+	.bg-orange {
+		background-color: #f28d26 !important;
+	}
+	
+	.bg-bluesky {
+		background-color: #23a0e9 !important;
+	}
+	
+	.bg-darkgreen {
+		background-color: #009688 !important;
+	}
+	
+	.products-teaser {
+		height: 360px;
+		max-width: 380px;
+		padding: 0;
+	}
+	
+	.products-teaser-wrap {
+		width: 100%;
+	}
+	
+	.teaser-info {
+		position: relative;
+		width: 90%;
+		height: 360px;
+		max-width: 390px;
+		padding-top: 30px;
+		padding-left: 30px;
+	}
+	
+	.products-teaser-top .teaser-info {
+		position: relative;
+		width: 60%;
+		height: 360px;
+		max-width: 390px;
+		padding-top: 30px;
+	}
+	
+	.product-logo {
+		position: absolute;
+		padding-top: 10px;
+		width: 80%;
+		height: 85px;
+	}
+	
+	.product-logo img {
+		width: 100%;
+	}
+	
+	.product-version {
+		position: absolute;
+		top: 42%;
+		background-color: white;
+		margin-left: -65px;
+		padding-left: 65px;
+		height: 55px;
+		width: 110%;
+		line-height: 53px;
+	}
+	
+	.product-description {
+		position: absolute;
+		top: 50%;
+		color: white;
+	}
+	
+	.products-teaser-top .product-description {
+		position: absolute;
+		top: 60%;
+	}
+	
+	.product-redict {
+		display: none;
+	}
+	
+	@media (min-width: 1200px) {
+		.products-list {
+			gap: 2%;
+		}
+		
+		.products-teaser {
+			width: 24%;
+		}
+		
+		.products-teaser-top {
+			width: 48%;
+			max-width: 760px;
+		}
+		
+		.product-version {
+			width: 115%;
+		}
+		
+		.products-teaser-top-img {
+			height: 375px;
+			width: 40%;
+			padding: 30px 15px;
+		}
+		
+		.products-teaser-top-img img {
+			height: 375px;
+			width: 100%;
+		}
+	}
+	
+	@media (min-width: 1560px) {
+		.product-redict {
+			display: block;
+			position: absolute;
+			left: 10%;
+			font-size: 1.25rem;
+			top: 100%;
+		}
+		
+		.product-version {
+			width: 110%;
+		}
+	}
+	
+	@media (max-width: 1200px) {
+		.products-list {
+			gap: 2%
+		}
+		
+		.products-teaser {
+			width: 48%;
+			max-width: none;
+			margin-bottom: 1.25%;
+		}
+		
+		.teaser-info {
+			width: 100%;
+		}
+		
+		.products-teaser-top-img {
+			display: none;
+		}
+	}
+	
+	@media (max-width: 767px) {
+		.products-teaser {
+			width: 100%;
+			max-width: none;
+			padding-left: 12px;
+		}
+		
+		.teaser-info {
+			padding-left: 15px;
+			width: 90%;
+		}
+		
+		.products-teaser-top-img {
+			display: none;
+		}
+		
+		.product-version {
+			position: absolute;
+			top: 42%;
+			background-color: white;
+			margin-left: -15px;
+			padding-left: 15px;
+			height: 55px;
+			width: 100%;
+			line-height: 53px;
+		}
+	}
+</style>
+
+<div class="container-fluid products w-85">
+	<div class="products-title fs-2 fw-bold">
+		<p>Products</p>
+	</div>
+	<div class="products-description fs-5">
+		<p>MVTec is a leading international manufacturer of software for machine vision. MVTec products are used in <a href="#">all demanding areas of imaging</a> and enable new automation solutions for the Industrial Internet of Things by providing <a href="#">high-end technologies</a> like 3D vision, deep learning, and embedded vision. Machine vision software from MVTec is developed and designed right at the headquarters in Munich, Germany.
+		</p>
+	</div>
+	
+	<div class="products-list row g-0 row-cols-sm-1 row-cols-md-2 row-cols-lg-3">
+		<a href="#" class="products-teaser products-teaser-top bg-orange col-sm-1 col-md-1 col-lg-2 ">
+			<div class="products-teaser-wrap row">
+				<div class="products-teaser-top-img col z-2">
+					<img src="https://www.mvtec.com/fileadmin/Redaktion/07_software_boxes/softwarebox_halcon_progress_runner.png" width="407" height="543" alt="">
+				</div>
+				<div class="teaser-info col">
+					<div class="product-logo">
+						<img src="<%= products[0].logo %>" alt="">
+					</div>
+					<div class="product-version text-orange fs-5">
+						<p><%= products[0].version %></p>
+					</div>
+					<div class="product-description fs-6 fw-bold">
+						<p><%= products[0].description %></p>
+					</div>
+					<div class="product-redict text-orange">
+						<!-- &lt; => '<', &gt; => '>' -->
+						<p><%= products[0].redict_text %> <%- include('link_animation.ejs') %></p>
+					</div>
+				</div>
+			</div>
+		</a>
+		<a href="#" class="products-teaser bg-bluesky col-sm-1 col-md-1 ">
+			<div class="teaser-info col">
+				<div class="product-logo">
+					<img src="<%= products[1].logo %>" alt="">
+				</div>
+				<div class="product-description fs-6 fw-bold">
+					<p><%= products[1].description %></p>
+				</div>
+				<div class="product-redict text-bluesky">
+					<p><%= products[1].redict_text %> <%- include('link_animation.ejs') %></p>
+				</div>
+			</div>
+		</a>
+		<a href="#" class="products-teaser bg-darkgreen col-sm-1 col-md-1 ">
+			<div class="teaser-info col">
+				<div class="product-logo">
+					<img src="<%= products[2].logo %>" alt="">
+				</div>
+				<div class="product-description fs-6 fw-bold">
+					<p><%= products[2].description %></p>
+				</div>
+				<div class="product-redict text-darkgreen">
+					<p><%= products[2].redict_text %> <%- include('link_animation.ejs') %></p>
+				</div>
+			</div>
+		</a>
+	</div>
+</div>

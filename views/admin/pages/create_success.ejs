@@ -1,0 +1,54 @@
+<%- include('../elements/header') %>
+
+<body>
+	<%- include('../elements/navbar') %>
+	
+	<!--CONTENT-START-->
+	<div id="blog-body" class="module">
+		<style>
+			.redict {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				height: 300px;
+				border-color: green;
+				font-size: 1.6rem;
+			}
+			
+			.message_title {
+				color: #007BFF;
+			}
+			
+			.message {
+				margin-bottom: 20px;
+			}
+			
+			.redict_link {
+				color: #007BFF;
+				text-decoration: none;
+			}
+			
+			.redict_link:hover {
+				color: #0056b3;
+			}
+		</style>
+		<div class="redict">
+			<h1 class="message_title">Create post successfully</h1>
+			<p class="message">Returning Blog page.</p>
+			<a class="redict_link" href="/admin/dashboard">Return to Dashbaord</a>
+			<a href="/blog" class="redict_link">Redict to Blog</a>
+		</div>
+		<script>
+			setTimeout(function() {
+				window.location.href = '/admin/dashboard';
+			}, 10000);
+		</script>
+	</div>
+	<%- include('../elements/footer') %>
+</body>
+
+</html>

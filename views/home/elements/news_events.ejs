@@ -1,0 +1,102 @@
+<div class="container-fluid news-events">
+    <div class="row">
+        <div class="col-md-8 col-sm-12 col-lg-8 col-news">
+            <h3>News</h3>
+            <p class="fw-bold">Get all news about us and our products.</p>
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="<%= news[0].image %>" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="time "><%= news[0].time %> <span> &#124;<%= news[0].tag %> </span></h5>
+                            <h5 class="card-title"><%= news[0].title %></h5>
+                            <p class="card-text"><%= news[0].description %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="<%= news[1].image %>" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="time "><%= news[1].time %> <span> &#124;<%= news[1].tag %> </span></h5>
+                            <h5 class="card-title"><%= news[1].title %></h5>
+                            <p class="card-text"><%= news[1].description %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="<%= news[2].image %>" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="time "><%= news[2].time %> <span> &#124;<%= news[2].tag %> </span></h5>
+                            <h5 class="card-title"><%= news[2].title %></h5>
+                            <p class="card-text"><%= news[2].description %></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#" class="frame-text text-white">
+                <button type="button" class="btn btn-primary rounded-0 fw-bold" style="background-color:#062d64; margin-top: 4rem; padding-right: 3rem;">
+                    <p>SEE ALL NEWS <span><%- include('link_animation.ejs') %></span></p>
+                </button>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-4 col-events">
+            <h3>Events</h3>
+            <p class="fw-bold">Get all details about events, webinar and trade fair.</p>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="time"><%= events[0].time %> <span>| <%= events[0].tag %></span></h5>
+                    <h5 class="card-title"><%= events[0].title %></h5>
+                    <p class="card-text"
+                        style="white-space: nowrap;overflow: hidden !important;text-overflow: ellipsis;">
+                        <%= events[0].description %></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="time"><%= events[1].time %> <span>| <%= events[1].tag %></span></h5>
+                    <h5 class="card-title"><%= events[1].title %></h5>
+                    <p class="card-text"
+                        style="white-space: nowrap;overflow: hidden !important;text-overflow: ellipsis;">
+                        <%= events[1].description %></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="time"><%= events[2].time %> <span>| <%= events[2].tag %></span></h5>
+                    <h5 class="card-title"><%= events[2].title %></h5>
+                    <p class="card-text"
+                        style="white-space: nowrap;overflow: hidden !important;text-overflow: ellipsis;">
+                        <%= events[2].description %></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="time"><%= events[3].time %> <span>| <%= events[3].tag %></span></h5>
+                    <h5 class="card-title"><%= events[3].title %></h5>
+                    <p class="card-text"
+                        style="white-space: nowrap;overflow: hidden !important;text-overflow: ellipsis;">
+                        <%= events[3].description %></p>
+                </div>
+            </div>
+
+            <a href="#" class="frame-text text-white">
+                <button type="button" class="btn rounded-0 fw-bold" style="background-color:#fbba00; color: #062d64; padding-right: 3rem;">
+                    <p>SEE ALL EVENTS <span><%- include('link_animation.ejs') %></span></p>
+                </button>
+            </a>
+        </div>
+    </div>
+</div>

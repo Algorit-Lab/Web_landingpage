@@ -1,0 +1,75 @@
+<div class="container-fluid stories">
+    <h3>Latest Success Stories</h3>
+    <p>Learn more about how to use MVTec software products to develop high-innovative solutions: Read here the
+        newest stories.
+        <br> MVTec technologies are used in many different industries worldwide. To find a reference story out of
+        your branch, please take a look at our success story page.
+    </p>
+    <div class="row">
+        <div class="col-md-4 col-sm-12 col-lg-4">
+            <a class="story" href="#">
+                <div class="card">
+                    <img src="<%= stories[0].image %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <ul class="nav">
+                            <% for( let index = 0; index < stories[0].tag.length; index++ ) { %>
+                                <li><%= stories[0].tag[index] %></li>
+                            <% } %>
+                        </ul>
+                        <h4><%= stories[0].title %></h4>
+                        <div>
+                            <p class="card-text"
+                                style="white-space: nowrap;overflow: hidden !important;text-overflow: ellipsis;">
+                                <%= stories[0].description %>    </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-4">
+            <a class="story" href="#">
+                <div class="card">
+                    <img src="<%= stories[1].image %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <ul class="nav">
+                            <% for( let index = 0; index < stories[1].tag.length; index++ ) { %>
+                                <li><%= stories[1].tag[index] %></li>
+                            <% } %>
+                        </ul>
+                        <h4><%= stories[1].title %></h4>
+                        <div>
+                            <p class="card-text"
+                                style="white-space: nowrap;overflow: hidden !important;text-overflow: ellipsis;">
+                                <%= stories[1].description %>    </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-lg-4">
+            <a class="story" href="#">
+                <div class="card">
+                    <img src="<%= stories[2].image %>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <ul class="nav">
+                            <% for( let index = 0; index < stories[2].tag.length; index++ ) { %>
+                                <li><%= stories[2].tag[index] %></li>
+                            <% } %>
+                        </ul>
+                        <h4><%= stories[2].title %></h4>
+                        <div>
+                            <p class="card-text"
+                                style="white-space: nowrap;overflow: hidden !important;text-overflow: ellipsis;">
+                                <%= stories[2].description %>    </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <a href="#" class="frame-text text-white">
+        <button type="button" class="btn btn-primary rounded-0 fw-bold" style="background-color:#062d64; padding-right: 3rem;">
+            <p>BROWSE SUCCESS STORIES NOW <span><%- include('link_animation.ejs') %></span></p>
+        </button>
+    </a>
+</div>

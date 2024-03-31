@@ -1,0 +1,46 @@
+<div class="module blog-body">
+	<%- include('blog_navbar') %>
+	<div class="posts" data-id="0">
+		<% for(let i = 0; i < posts.length; i++) { %>
+		<% let e = posts[i]; %>
+		<div class="content">
+			<a href="/blog/<%= e.slug %>"><img class="img-post" src=<%= e.picture %> alt="post1"></a>
+			<div class="info">
+				<div class="datetime-reading">
+					<a href="#"><img class="logo" src="https://lh3.googleusercontent.com/a-/AOh14GgV8AVRY0eTlgf2Qs2B61cI10cwEMhMlCGbEgocQw=s96-c" height="30px">&nbsp;&nbsp;LIPS</a>
+					<span class="date"><%= e.time_upload %></span>
+					<span class="reading">2 min</span>
+					<button id="share"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+				</div>
+				<a href="/blog/<%= e.slug %>">
+					<h4><%= e.title %></h4>
+				</a>
+				<a href="/blog/<%= e.slug %>">
+					<p><%-/* summaryPosts[i] */%></p>
+				</a>
+				<li class="border"></li>
+				<div class="interact">
+					<span><%= e.views %> views</span>
+					<a href="#"><span><%= e.comment.length %> comments</span></a>
+					<button id="love"><i class="fa-regular fa-heart fa-lg"></i></button>
+				</div>
+			</div>
+		</div>
+		<% } %>
+		<div class="buttons">
+			<button id="backward"><i class="fa-solid fa-angles-left"></i></button>
+			<button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
+			<ul class="number">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+			<button id="next"><i class="fa-solid fa-chevron-right"></i></button>
+			<button id="foward"><i class="fa-solid fa-angles-right"></i></button>
+			<div class="clr"></div>
+		</div>
+		<div class="clr"></div>
+	</div>
+</div>

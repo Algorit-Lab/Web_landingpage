@@ -1,0 +1,33 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clr {
+    clear: both;
+}
+
+ul li {
+    list-style: none;
+}
+
+.module {
+    display: block;
+    margin-left: calc((100% - var(--module-width))/2);
+    width: 1450px;
+}
+
+.module_maxwidth {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+}
