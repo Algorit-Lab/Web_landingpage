@@ -62,21 +62,21 @@ router.get("/", (req, res) => {
 
     const news = [
         {
-            image : 'https://media.licdn.com/dms/image/D4E22AQFjoXrDPse3ZA/feedshare-shrink_800/0/1690375831180?e=2147483647&v=beta&t=rr0RXjpQYbQcAw0YN41ubiVUTGoemSS7VkXHhS5I2Z4',
+            image : '',
             time: 'February 2, 2024',
             tag: 'HALCON, Certified Integration Partner',
             title: 'MVTec welcomes Vision On Line as a new partner',
             description: 'MVTec is pleased to collaborate with Vision On Line, a company specializing in automation solutions based on image processing. Together, they optimize production processes using advanced machine vision, robotics, and automation technologies.',
         },
         {
-            image : 'https://media.licdn.com/dms/image/D4E22AQFjoXrDPse3ZA/feedshare-shrink_800/0/1690375831180?e=2147483647&v=beta&t=rr0RXjpQYbQcAw0YN41ubiVUTGoemSS7VkXHhS5I2Z4',
+            image : '',
             time: 'February 2, 2024',
             tag: 'HALCON, Certified Integration Partner',
             title: 'MVTec welcomes Vision On Line as a new partner',
             description: 'MVTec is pleased to collaborate with Vision On Line, a company specializing in automation solutions based on image processing. Together, they optimize production processes using advanced machine vision, robotics, and automation technologies.',
         },
         {
-            image : 'https://media.licdn.com/dms/image/D4E22AQFjoXrDPse3ZA/feedshare-shrink_800/0/1690375831180?e=2147483647&v=beta&t=rr0RXjpQYbQcAw0YN41ubiVUTGoemSS7VkXHhS5I2Z4',
+            image : '',
             time: 'February 2, 2024',
             tag: 'HALCON, Certified Integration Partner',
             title: 'MVTec welcomes Vision On Line as a new partner',
