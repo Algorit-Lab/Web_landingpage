@@ -50,28 +50,38 @@ body {
 	transition: all .5s;
 } */
 
-.stories h3{
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #062d64;
-    margin-bottom: 1.2rem;
-}
-.stories .row{
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-.stories .nav{
-    font-weight: bold;
-    color:#a3a5a7;
-    font-size: 1.2rem;
-}
-.stories li{
-    margin-right: 1rem;
-}
-.stories h4{
-    font-weight: bold;
-    color: #062d64;
-    font-size: 1.3rem;
+.stories {
+    h3{
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #062d64;
+        margin-bottom: 1.2rem;
+    }
+    .row{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    .nav{
+        font-weight: bold;
+        color:#a3a5a7;
+        font-size: 1.2rem;
+    }
+    li{
+        margin-right: 1rem;
+    }
+    h4{
+        font-weight: bold;
+        color: #062d64;
+        font-size: 1.3rem;
+    }
+    p{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 .frame-text{
     position: relative;
