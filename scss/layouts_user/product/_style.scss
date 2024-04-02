@@ -1,0 +1,23 @@
+.portfolio {
+    .title, h3{
+        margin-top: 2rem;
+        color: #062d64;
+        margin-bottom: 2rem;
+        font-weight: bold;
+    }
+    h4{
+        color: #062d64;
+    }
+    .card:hover{
+        transform: scale(1.05);
+        transition: all .5s;
+    }
+    p{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
