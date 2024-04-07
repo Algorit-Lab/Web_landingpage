@@ -14,9 +14,9 @@ const admin_route = express();
 // admin_route.use(bodyParser.urlencoded({ extended: false }));
 // admin_route.use(express.static(path.join(__dirname, 'public')));
 admin_route.use(session({
-	secret:config.sessionSecret,
-	resave:true,
-	saveUninitialized:true
+	secret: config.sessionSecret,
+	resave: true,
+	saveUninitialized: true
 }));
 
 admin_route.get('/login', auth.isLogout, adminController.loadLogin);
