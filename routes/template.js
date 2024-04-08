@@ -44,4 +44,8 @@ router.get("/temas", (req, res) => {
     res.render('template/temas/home/pages/home', { title: 'Temas' });
 });
 
+router.get("/thegioiic", (req, res) => {
+    res.render('template/thegioiic/home/pages/home', { title: 'Thegioiic' });
+});
+
 module.exports = router;

@@ -1,0 +1,37 @@
+<div class="product">
+    <div class="container-fluid">
+        <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">New products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Featured products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Discount products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Hot sale</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Free ship in Vietnam</a>
+            </li>
+        </ul>
+        <div class="product-list">
+            <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                <% for( let index = 0; index < 20; index++ ) { %>
+                    <div class="col-md-1 col-sm-4">
+                        <div class="card">
+                            <img src="https://www.thegioiic.com/upload/medium/53147.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Card title</h5>
+                              <p class="card-text">Some quick example text to build.</p>
+                              <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                          </div>
+                    </div>        
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>
