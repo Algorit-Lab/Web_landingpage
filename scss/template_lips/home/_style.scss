@@ -1,0 +1,46 @@
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container-fluid{
+    width: 85%;
+}
+.top-nav{
+    color: #14345C;
+    span{
+        margin-left: 0.5rem;
+    }
+}
+.bottom-nav{
+    text-transform: uppercase;
+    .nav-start{
+        margin-left: 9.5rem;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        width: 65%;
+    }
+    .nav-link{
+        color: #14345C;
+    }
+}
+.product{
+    margin-top: 5rem;
+}
+.product-type{
+    .box{
+        background-color:#2e5d97;
+        border-radius: 5rem;
+        color: white;
+        width: 10rem;
+        height: 3rem;
+        line-height: 1.5rem;
+    }
+}
+.product-slide{
+    margin-top: 5rem;
+}
