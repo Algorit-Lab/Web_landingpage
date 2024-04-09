@@ -9,21 +9,16 @@ a{
 }
 .bottom-nav{
     background-color: #0070bb;
-    #navbarNav{
+    .navbar-nav{
         display: flex;
         justify-content: space-between;
-        align-items: center;
-        .navbar-nav{
-            display: flex;
-            justify-content: space-between;
-            list-style-type: none;
-            margin-bottom: 0;
-            padding-left: 0;
-            width: 100%;
-        }
-        a{
-            color: white;
-        }
+        list-style-type: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        width: 100%;
+    }
+    a{
+        color: white;
     }
 }
 .supplier{
@@ -89,12 +84,47 @@ a{
     }
 }
 @media (max-width: 710px) {
-    .top-footer,.mid-footer,.bottom-nav{
+    .top-footer,.mid-footer{
         display: none;
     }
-    .card{
-        .card-text,.btn{
+    .container-fluid{
+        width: 85%;
+    }
+}
+.product{
+    margin-top: 2rem;
+}
+.product-list{
+    margin-top: 1.5rem;
+}
+.tab-box{
+    margin-top: 2rem;
+    background-color: #eee;
+    display:flex;
+    justify-content: space-between;
+    h3{
+        font-size: 1rem;
+        font-weight: bold;
+        margin-right: 1rem;
+    }
+    .nav-item{
+        font-size: 0.8rem;
+        margin-right: 0.8rem;
+    }
+}
+@media (max-width: 500px){
+    .container-fluid{
+        width: 95%;
+    }
+    .tab-box{
+        .nav-item{
             display: none;
         }
+        .view-more{
+            display: block;
+        }
+    }
+    .card-title{
+        font-size: 1rem;
     }
 }
