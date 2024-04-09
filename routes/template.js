@@ -69,4 +69,8 @@ router.get("/thegioiic", (req, res) => {
     res.render('template/thegioiic/home/pages/home', { title: 'Thegioiic' });
 });
 
+router.get("/lips", (req, res) => {
+    res.render('template/lips/home/pages/home', { title: 'LIPS' });
+});
+
 module.exports = router;

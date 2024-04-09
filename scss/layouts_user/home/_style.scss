@@ -175,38 +175,37 @@ ul{
 .top-footer{
     position: relative;
     min-height: 22rem;
-}
-.footer-bg{
-    position: absolute;
-    background-image: url('https://www.mvtec.com/typo3conf/ext/mvtec/Resources/Public/Images/Assets/footerBg.png');
-    background-size: cover;
-    height: 100%;
-    background-position: center;
-    z-index: 1;
-}
-.footer-color-bg{
-    background-color:#062d64;
-    z-index: 2;
-    opacity: 0.5;
-    position: absolute;
-    height: 100%;
-}
-.top-footer .nav-link{
-    color: white;
-    text-transform: uppercase;
-}
-
-.top-footer .navbar-nav {
-    width: 100%;
-    margin-top: 3rem;
-    z-index: 3;
-}
-.top-footer ul {
-    width: 20%; 
-}
-.top-footer a{
-    display: inline;
-}
+    .footer-bg{
+        position: absolute;
+        background-image: url('https://www.mvtec.com/typo3conf/ext/mvtec/Resources/Public/Images/Assets/footerBg.png');
+        background-size: cover;
+        height: 100%;
+        background-position: center;
+        z-index: 1;
+    }
+    .footer-color-bg{
+        background-color:#062d64;
+        z-index: 2;
+        opacity: 0.5;
+        position: absolute;
+        height: 100%;
+    }
+    .nav-link{
+        color: white;
+        text-transform: uppercase;
+    }
+    .navbar-nav {
+        width: 100%;
+        margin-top: 3rem;
+        z-index: 3;
+    }
+    ul {
+        width: 20%; 
+    }
+    a{
+        display: inline;
+    }
+}  
 
 @media (max-width: 1200px) {
     .top-footer{
