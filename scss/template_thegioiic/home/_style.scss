@@ -15,7 +15,6 @@ a{
         align-items: center;
         .navbar-nav{
             display: flex;
-            gap: 30px;
             justify-content: space-between;
             list-style-type: none;
             margin-bottom: 0;
@@ -39,7 +38,6 @@ a{
 .top-footer{
     .navbar-nav{
         display: flex;
-        gap: 30px;
         justify-content: space-between;
         list-style-type: none;
         margin-bottom: 0;
@@ -49,29 +47,54 @@ a{
 }
 .mid-footer{
     position: relative;
+    a{
+        color: white;
+    }
     .color-bg{
         position: absolute;
-        background-color:#062d64;
-        opacity: 0.9;
+        background-color:#232f3e;
         height: 100%;
         z-index: 1;
     }
     .navbar-nav{
-        position: absolute;
         z-index: 2;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        margin-bottom: 0;
+        padding-left: 0;
+        width: 100%;
+    }
+    .payment{
+        width: 20rem;
+        img{
+            height: 2rem;
+        }
     }
 }
 .bottom-footer{
     position: relative;
     .color-bg{
         position: absolute;
-        background-color:#091527;
-        opacity: 0.8;
+        background-color:#131a22;
         height: 100%;
         z-index: 1;
     }
-    .ul{
-        position: absolute;
+    .text{
         z-index: 2;
+        color: white;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media (max-width: 710px) {
+    .top-footer,.mid-footer,.bottom-nav{
+        display: none;
+    }
+    .card{
+        .card-text,.btn{
+            display: none;
+        }
     }
 }
