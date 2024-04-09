@@ -62,21 +62,21 @@ router.get("/", (req, res) => {
 
     const news = [
         {
-            image: 'layouts_user/image/next_icon.png',
+            image: '/layouts_admin/image/AlgoritLogo.png',
             time: 'February 2, 2024',
             tag: 'HALCON, Certified Integration Partner',
             title: 'MVTec welcomes Vision On Line as a new partner',
             description: 'MVTec is pleased to collaborate with Vision On Line, a company specializing in automation solutions based on image processing. Together, they optimize production processes using advanced machine vision, robotics, and automation technologies.',
         },
         {
-            image: 'layouts_user/image/next_icon.png',
+            image: '/layouts_admin/image/AlgoritLogo.png',
             time: 'February 2, 2024',
             tag: 'HALCON, Certified Integration Partner',
             title: 'MVTec welcomes Vision On Line as a new partner',
             description: 'MVTec is pleased to collaborate with Vision On Line, a company specializing in automation solutions based on image processing. Together, they optimize production processes using advanced machine vision, robotics, and automation technologies.',
         },
         {
-            image: 'layouts_user/image/next_icon.png',
+            image: '/layouts_admin/image/AlgoritLogo.png',
             time: 'February 2, 2024',
             tag: 'HALCON, Certified Integration Partner',
             title: 'MVTec welcomes Vision On Line as a new partner',

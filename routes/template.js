@@ -41,7 +41,28 @@ router.get("/", (req, res) => {
 });
 
 router.get("/temas", (req, res) => {
-    res.render('template/temas/home/pages/home', { title: 'Temas' });
+    serviceItems = [
+        {
+            image: '/template/temas/img/01_Giai_phap_robot.webp',
+            description: "Cung cấp đầy đủ giải pháp liên quan tới các dòng robot công nghiệp, robot để bàn, cartesian, scara, robot tương tác 6 trục."
+        },
+        {
+            image: '/template/temas/img/01_Giai_phap_robot.webp',
+            description: "Cung cấp đầy đủ giải pháp liên quan tới các dòng robot công nghiệp, robot để bàn, cartesian, scara, robot tương tác 6 trục."
+        },
+        {
+            image: '/template/temas/img/01_Giai_phap_robot.webp',
+            description: "Cung cấp đầy đủ giải pháp liên quan tới các dòng robot công nghiệp, robot để bàn, cartesian, scara, robot tương tác 6 trục."
+        },
+        {
+            image: '/template/temas/img/01_Giai_phap_robot.webp',
+            description: "Cung cấp đầy đủ giải pháp liên quan tới các dòng robot công nghiệp, robot để bàn, cartesian, scara, robot tương tác 6 trục."
+        }
+    ]
+    if (serviceItems.length > 4) {
+        serviceItems = serviceItems.slice(0, 4);
+    }
+    res.render('template/temas/home/pages/home', { title: 'Temas', serviceItems: serviceItems });
 });
 
 router.get("/thegioiic", (req, res) => {

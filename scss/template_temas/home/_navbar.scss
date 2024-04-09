@@ -1,0 +1,146 @@
+.navbar {
+    z-index: 1000 !important;
+    font-weight: 600;
+}
+
+.nav-item {
+    box-sizing: border-box;
+    font-size: 12px;
+    display: inline-block;
+    height: 35px;
+    line-height: .9;
+}
+
+.nav-link {
+    position: relative;
+    display: block;
+    height: 35px;
+    padding: 10px 15px !important;
+}
+
+@media (max-width: 1200px) {
+    .navbar {
+        width: 950px !important;
+        margin: 0 auto;
+    }
+}
+
+.navbar-1 {
+    height: 40px;
+    margin-top: 14px
+}
+
+.navbar-search-form {
+    padding: 0 0;
+    height: 100%;
+}
+
+.search-box {
+    transition: opacity 0.5s ease, width 1s ease;
+    width: 0px;
+    height: 100%;
+    opacity: 0%;
+}
+
+.navbar .search-box.active {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    opacity: 1;
+    width: 263px;
+}
+
+.navbar #search-btn {
+    color: white;
+}
+
+.navbar .login-button {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    color: white;
+}
+
+.navbar .login-button:hover,
+.navbar .login-button:hover>a {
+    color: var(--navbar-link-hover-color);
+}
+
+.navbar-2 {
+    height: 55px;
+    position: sticky;
+}
+
+.navbar-2 .LogoBlack{
+    display: none;
+}
+
+.nav-item .nav-link {
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.navbar-2 .nav-item:hover {
+    background-color: var(--navbar-link-hover-color);
+}
+
+.navbar .navbar-button {
+    border-radius: 10px;
+    background-color: var(--navbar-link-hover-color);
+    margin-left: 15px;
+}
+
+.navbar-toggler {
+    background-color: white;
+}
+
+.navbar.container-fluid,
+.navbar .container-fluid {
+    width: var(--content-width);
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* animation? */
+@keyframes open-search-box {
+    to {
+        opacity: 100%;
+        width: 263px
+    }
+}
+
+@keyframes close-search-box {
+    from {
+        opacity: 100%;
+    }
+    
+    to {
+        opacity: 0%;
+    }
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure the sticky navbar is above other content */
+    background-color: white; /* Set the background color */
+    /* Add any other styles for the sticky behavior */
+}
+
+.sticky .nav-item .nav-link {
+    color: black;
+}
+
+.sticky .navbar-button .nav-link {
+    color: white;
+}
+
+.sticky .LogoBlack{
+    display: block;
+}
+
+.sticky .LogoLight{
+    display: none;
+}
