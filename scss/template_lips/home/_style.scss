@@ -27,20 +27,53 @@ a{
     .nav-link{
         color: #14345C;
     }
+    .btn{
+        padding: 0 2rem;
+        border-radius: 1rem;
+    }
 }
+.slide-main{
+    img{
+        height: 45rem;
+    }
+}
+.bg-slide{
+    background-image: url('/template/lips/img/slide.png');
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+}
+
 .product{
-    margin-top: 5rem;
+    margin-top: 6rem;
 }
 .product-type{
-    .box{
+    .btn{
         background-color:#2e5d97;
         border-radius: 5rem;
         color: white;
-        width: 10rem;
-        height: 3rem;
-        line-height: 1.5rem;
+        padding: 1rem;
+        opacity: 0.6;
+        &:hover{
+            opacity: 1;
+        }
     }
+    .active, .active:hover{
+        background-color: #2e5d97;
+        opacity: 1;
+    }
+    
 }
-.product-slide{
-    margin-top: 5rem;
+#product-slide{
+    margin-top: 4rem;
+    text-align: center;
+    .compare-buy{
+        display: flex;
+        justify-content: center;
+        a{
+            margin-top: 1rem;
+            padding: 0.3rem 1rem;
+            border-radius: 1rem;
+        }
+    }
 }
