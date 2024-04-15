@@ -57,4 +57,3 @@ app.use("/technologies", require("./routes/technology"));
 app.use("/company", require("./routes/company"));
 app.use("/template", require("./routes/template"));
 app.use("/admin", require("./routes/admin"));
-app.use("/talk", require("./middleware/talk"));

@@ -1,8 +1,16 @@
 :root {
     --navbar-link-hover-color: rgb(211, 31, 52);
     --content-width: 1150px;
+    --content-width-md: 950px;
+    --content-width-sm: 100%;
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #b1b1b1;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    color: inherit;
 }

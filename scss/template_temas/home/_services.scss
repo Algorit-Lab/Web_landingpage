@@ -1,0 +1,119 @@
+.services {
+    position: relative;
+    display: block;
+    top: 80vh;
+    z-index: 10;
+}
+
+.services.container-fluid {
+    width: var(--content-width);
+}
+
+.services .service-img {
+    width: 100%;
+}
+
+.services .service-content-wrap {
+    margin-top: 20px;
+}
+
+.services .service-item {
+    height: 350px;
+    background-color: white;
+    padding: 0;
+    margin: 10px .5%;
+    width: 24%;
+    min-width: 276px;
+}
+
+.services .service-content-wrap {
+    font-size: 12px;
+    background-color: white;
+    padding-left: 20px;
+    color: #192534;
+}
+
+.services .title-cell {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.services .redirct-cell {
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+@media (max-width: 1150px) {
+    .services.container-fluid {
+        width: var(--content-width-md);
+    }
+    .services .service-item {
+        min-width: 228px;
+    }
+    
+}
+
+@media (max-width: 950px) {
+    .services.container-fluid {
+        width: var(--content-width-sm);
+    }
+
+    .services .service-img-box{
+        height: 50%;
+    }
+
+    .services .service-img-box>* {
+        height: 100%;
+    }
+
+    .services .service-item {
+        width: 49%;
+        min-width: 366px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services .service-item {
+        min-width: 97%;
+        margin: 10px 1.5%;
+    }
+
+    .services .service-img-box{
+        height: 100%;
+    }
+
+    .services .service-img-box>* {
+        height: 100%;
+    }
+
+    .services .service-content-wrap {
+        z-index: 11;
+        position: relative;
+        width: 100%;
+        height: 175px;
+        bottom: 53%;
+    }
+
+    .services .service-content-wrap>* {
+        position: absolute;
+    }
+
+    .services .service-content-wrap .title-cell {
+        top: 10%;
+        font-size: 20px;
+    }
+
+    .services .service-content-wrap .content-cell {
+        top: 30%;
+        font-size: 16px;
+    }
+
+    .services .service-content-wrap .redirct-cell {
+        bottom: 10%;
+        font-size: 18px;
+    }
+}

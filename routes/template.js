@@ -44,19 +44,27 @@ router.get("/temas", (req, res) => {
     serviceItems = [
         {
             image: '/template/temas/img/01_Giai_phap_robot.webp',
-            description: "Cung cấp đầy đủ giải pháp liên quan tới các dòng robot công nghiệp, robot để bàn, cartesian, scara, robot tương tác 6 trục."
+            title: "Robot solution",
+            description: "Provide full solutions related to industrial robots, desktop robots, cartesian, scara, 6-axis interactive robots.",
+            redirct_text: "Consulting solutions"
         },
         {
             image: '/template/temas/img/01_Giai_phap_robot.webp',
-            description: "Cung cấp đầy đủ giải pháp liên quan tới các dòng robot công nghiệp, robot để bàn, cartesian, scara, robot tương tác 6 trục."
+            title: "Robot solution",
+            description: "Provide full solutions related to industrial robots, desktop robots, cartesian, scara, 6-axis interactive robots.",
+            redirct_text: "Consulting solutions"
         },
         {
             image: '/template/temas/img/01_Giai_phap_robot.webp',
-            description: "Cung cấp đầy đủ giải pháp liên quan tới các dòng robot công nghiệp, robot để bàn, cartesian, scara, robot tương tác 6 trục."
+            title: "Robot solution",
+            description: "Provide full solutions related to industrial robots, desktop robots, cartesian, scara, 6-axis interactive robots.",
+            redirct_text: "Consulting solutions"
         },
         {
             image: '/template/temas/img/01_Giai_phap_robot.webp',
-            description: "Cung cấp đầy đủ giải pháp liên quan tới các dòng robot công nghiệp, robot để bàn, cartesian, scara, robot tương tác 6 trục."
+            title: "Robot solution",
+            description: "Provide full solutions related to industrial robots, desktop robots, cartesian, scara, 6-axis interactive robots.",
+            redirct_text: "Consulting solutions"
         }
     ]
     if (serviceItems.length > 4) {

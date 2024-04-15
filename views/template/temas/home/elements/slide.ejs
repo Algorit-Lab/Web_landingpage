@@ -36,7 +36,7 @@
 		z-index: 2;
 		text-align: left;
 		font-size: 20px;
-		width: 1150px;
+		width: var(--content-width);
 		
 		position: absolute;
 		right: 0;
@@ -58,6 +58,24 @@
 		display: inline-block;
 		padding: 10px 15px;
 		margin-top: 10px;
+	}
+	
+	@media (max-width: 1150px) {
+		.slide .slide-caption {
+			width: var(--content-width-md);
+		}
+	}
+	
+	@media (max-width: 950px) {
+		.slide .slide-caption {
+			width: 755px;
+		}
+	}
+	
+	@media (max-width: 75px) {
+		.slide .slide-caption {
+			width: var(--content-width-sm);
+		}
 	}
 </style>
 
