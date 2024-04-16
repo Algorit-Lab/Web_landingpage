@@ -74,7 +74,15 @@ router.get("/temas", (req, res) => {
 });
 
 router.get("/thegioiic", (req, res) => {
-    res.render('template/thegioiic/home/pages/home', { title: 'Thegioiic' });
+    const newProducts = [
+        {
+            image: '/template/thegioiic/img/product.webp',
+            title: "Vinasemi 8858-I Máy Khò Cầm Tay 700W, 220VAC, 100-480ºC",
+            price: '$39.474',
+            stock: '38'
+        }
+    ]
+    res.render('template/thegioiic/home/pages/home', { title: 'Thegioiic', newProducts: newProducts });
 });
 
 router.get("/lips", (req, res) => {

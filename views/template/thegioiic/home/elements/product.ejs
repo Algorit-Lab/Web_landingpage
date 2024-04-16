@@ -25,11 +25,11 @@
                 <% for( let index = 0; index < 5; index++ ) { %>
                     <div class="col-md-4 col-sm-12">
                         <div class="card">
-                            <img src="https://www.thegioiic.com/upload/medium/53147.jpg" class="card-img-top" alt="...">
+                            <img src="<%= newProducts[0].image %>" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title">Vinasemi 8858-I Máy Khò Cầm Tay 700W, 220VAC, 100-480ºC</h5>
-                              <p class="card-text price">$39.474</p>
-                              <span class="stock">In stock: 38 </span>
+                              <h5 class="card-title"><%= newProducts[0].title %></h5>
+                              <p class="card-text price"><%= newProducts[0].price %></p>
+                              <span class="stock"><%= newProducts[0].stock %></span>
                             </div>
                           </div>
                     </div>        
