@@ -46,6 +46,7 @@ a{
 
 .product{
     margin-top: 6rem;
+    margin-bottom: 6rem;
 }
 .product-type{
     .btn{
@@ -69,6 +70,9 @@ a{
 #product-slide{
     margin-top: 4rem;
     text-align: center;
+    .card-body img{
+        max-height: 17.3rem;
+    }
     .details{
         display: flex;
         justify-content: space-around;
@@ -81,6 +85,23 @@ a{
             padding: 0.3rem 1rem;
             min-height: 2.3rem;
             min-width: 6.3rem;
+        }
+    }
+}
+
+.sense-the-world{
+    height: 35rem;
+    background-color:rgb(236, 241, 241);
+    text-align: center;
+    .title{ 
+        color: #14345C;
+    }
+    .card{
+        margin-bottom: 1rem;
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.05);
+            transition: all .4s;
         }
     }
 }
