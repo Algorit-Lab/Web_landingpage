@@ -1,19 +1,27 @@
-<style>
-	.products {
-		position: relative;
-		top: 80vh;
-	}
-</style>
-
 <div class="container-fluid products page-bg-1 w-100">
 	<div class="product-title text-center">
 		<h2>Our Products</h2>
 	</div>
-	<div class="product-items">
+	<div class="product-items container-fluid">
 		<div class="row">
-			<div class="product-item col-4">
-				
+			<% productItems.forEach(e => { %>
+			<div class="product-item col-md-4 col-sm-6 col-xs-12">
+				<div class="product-item-place">
+					<div class="product-item-card">
+						<div class="product-item-img">
+							<img class="product-img-red" width="80" height="81" viewBox="0 0 80 81" src="<%= e.imageRed %>" alt="none" />
+							<img class="product-img-white" width="80" height="81" viewBox="0 0 80 81" src="<%= e.imageWhite %>" alt="none" />
+						</div>
+						<div class="product-item-title">
+							<%= e.title %>
+						</div>
+						<div class="product-item-description">
+							<%= e.description %>
+						</div>
+					</div>
+				</div>
 			</div>
+			<% }) %>
 		</div>
 	</div>
 </div>

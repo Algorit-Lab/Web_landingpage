@@ -68,10 +68,28 @@ router.get("/temas", (req, res) => {
             redirct_text: "Consulting solutions"
         }
     ]
-    if (serviceItems.length > 4) {
-        serviceItems = serviceItems.slice(0, 4);
-    }
-    res.render('template/temas/home/pages/home', { title: 'Temas', serviceItems: serviceItems });
+
+    productItems = [
+        {
+            title: "Product Title",
+            description: "Product Description: This is a template product card with a title, description, and image. You can use it to showcase your products or services. It about 50-100 words long.",
+            imageRed: "/template/temas/img/trade_red.svg",
+            imageWhite: "/template/temas/img/trade_white.svg"
+        },
+        {
+            title: "Product Title",
+            description: "Product Description: This is a template product card with a title, description, and image. You can use it to showcase your products or services. It about 50-100 words long.",
+            imageRed: "/template/temas/img/trade_red.svg",
+            imageWhite: "/template/temas/img/trade_white.svg"
+        },
+        {
+            title: "Product Title",
+            description: "Product Description: This is a template product card with a title, description, and image. You can use it to showcase your products or services. It about 50-100 words long.",
+            imageRed: "/template/temas/img/trade_red.svg",
+            imageWhite: "/template/temas/img/trade_white.svg"
+        }
+    ]
+    res.render('template/temas/home/pages/home', { title: 'Temas', serviceItems: serviceItems, productItems: productItems });
 });
 
 router.get("/thegioiic", (req, res) => {
@@ -88,7 +106,7 @@ router.get("/thegioiic", (req, res) => {
         {
             name: 'ICs',
             details: ['Processors MPU & Microcontrollers MCU', 'Programmable Logic Circuits',
-            'Memory ICs', 'Power Management ICs', 'Interface ICs'],
+                'Memory ICs', 'Power Management ICs', 'Interface ICs'],
             products: [
                 {
                     image: '/template/thegioiic/img/ics_product.webp',
@@ -102,7 +120,7 @@ router.get("/thegioiic", (req, res) => {
         {
             name: 'Boards, Modules, Debuggers',
             details: ['GPS, GSM, GPRS Modules', 'Programmer, Debugger',
-            'RF, WiFi, Bluetooth Modules', 'Power Management ICs'],
+                'RF, WiFi, Bluetooth Modules', 'Power Management ICs'],
             products: [
                 {
                     image: '/template/thegioiic/img/boards_product.webp',
@@ -173,7 +191,7 @@ router.get("/lips", (req, res) => {
             name: 'Structured-Light Camera',
             products: [
                 {
-                    
+
                 }
             ]
         },
@@ -181,7 +199,7 @@ router.get("/lips", (req, res) => {
             name: 'Edge Accelerator',
             products: [
                 {
-                    
+
                 }
             ]
         },
@@ -189,7 +207,7 @@ router.get("/lips", (req, res) => {
             name: 'Multiple Dimensioning',
             products: [
                 {
-                    
+
                 }
             ]
         },
@@ -197,7 +215,7 @@ router.get("/lips", (req, res) => {
             name: 'Facial Recognition',
             product: [
                 {
-                    
+
                 }
             ]
         }
