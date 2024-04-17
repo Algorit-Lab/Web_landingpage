@@ -96,6 +96,14 @@ a{
 }
 .product-list{
     margin-top: 1.5rem;
+    .card-title{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        // white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
 .tab-box{
     margin-top: 2rem;

@@ -51,8 +51,10 @@ a{
     .btn{
         background-color:#2e5d97;
         border-radius: 5rem;
+        min-width: 13rem;
+        min-height: 4rem;
         color: white;
-        padding: 1rem;
+        padding: 0.3rem;
         opacity: 0.6;
         &:hover{
             opacity: 1;

@@ -27,86 +27,42 @@
                         <div class="card">
                             <img src="<%= newProducts[0].image %>" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <h5 class="card-title"><%= newProducts[0].title %></h5>
-                              <p class="card-text price"><%= newProducts[0].price %></p>
-                              <span class="stock"><%= newProducts[0].stock %></span>
+                              <h5 class="card-title fs-6"><%= newProducts[0].title %></h5>
+                              <p class="card-text price"><%= newProducts[0].price %><span>/<%= newProducts[0].unit%></span></p>
+                              <div class="stock fs-6 p-1 mb-1 bg-success-subtle text-success"><span><i class="bi bi-check"></i> In stock: <%= newProducts[0].stock %></span></div>
                             </div>
                           </div>
                     </div>        
                 <% } %>
             </div>
-            <div class="tab-box">
-                <h3><a href="">ICs</a></h3>
-                <ul class="nav">
-                    <li class="nav-item"><a href="">Processors MPU & Microcontrollers MCU</a></li>
-                    <li class="nav-item"><a href="">Programmable Logic Circuits</a></li>
-                    <li class="nav-item"><a href="">Memory ICs</a></li>
-                    <li class="nav-item"><a href="">Power Management ICs</a></li>
-                    <li class="nav-item"><a href="">Interface ICs</a></li>
-                    <li class="nav-item view-more"><a href=""><span>View more</span><i class="bi bi-chevron-right"></i></a></li>
-                </ul>
-            </div>
-            <div class="ics-product row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                <% for( let index = 0; index < 5; index++ ) { %>
-                    <div class="col-md-4 col-sm-12 ">
-                        <div class="card">
-                            <img src="https://www.thegioiic.com/upload/medium/45536.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">ATMEGA168PA-AU, 8bit AVR Microcontroller, 20MHz, 16kB Flash, 32 Pin TQFP</h5>
-                              <p class="card-text price">$2.237</p>
-                              <span class="stock">In stock: 98 </span>
-                            </div>
-                          </div>
-                    </div>        
-                <% } %>
-            </div>
-            <div class="tab-box">
-                <h3><a href="">Boards, Modules, Debuggers</a></h3>
-                <ul class="nav">
-                    <li class="nav-item"><a href="">GPS, GSM, GPRS Modules</a></li>
-                    <li class="nav-item"><a href="">Programmer, Debugger</a></li>
-                    <li class="nav-item"><a href="">RF, WiFi, Bluetooth Modules</a></li>
-                    <li class="nav-item"><a href="">Power Management ICs</a></li>
-                    <li class="nav-item view-more"><a href=""><span>View more</span><i class="bi bi-chevron-right"></i></a></li>
-                </ul>
-            </div>
-            <div class="board-product row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                <% for( let index = 0; index < 5; index++ ) { %>
-                    <div class="col-md-4 col-sm-12 ">
-                        <div class="card">
-                            <img src="https://www.thegioiic.com/upload/medium/53886.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">ATMEGA168PA-AU, 8bit AVR Microcontroller, 20MHz, 16kB Flash, 32 Pin TQFP</h5>
-                              <p class="card-text price">$2.237</p>
-                              <span class="stock">In stock: 98 </span>
-                            </div>
-                          </div>
-                    </div>        
-                <% } %>
-            </div>
-            <div class="tab-box">
-                <h3><a href="">Connectors, Sockets</a></h3>
-                <ul class="nav">
-                    <li class="nav-item"><a href="">Headers & Wire Housings</a></li>
-                    <li class="nav-item"><a href="">IC Sockets</a></li>
-                    <li class="nav-item"><a href="">Terminal Blocks</a></li>
-                    <li class="nav-item view-more"><a href=""><span>View more</span><i class="bi bi-chevron-right"></i></a></li>
-                </ul>
-            </div>
-            <div class="board-product row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                <% for( let index = 0; index < 5; index++ ) { %>
-                    <div class="col-md-4 col-sm-12 ">
-                        <div class="card">
-                            <img src="https://www.thegioiic.com/upload/medium/21220.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">ATMEGA168PA-AU, 8bit AVR Microcontroller, 20MHz, 16kB Flash, 32 Pin TQFP</h5>
-                              <p class="card-text price">$2.237</p>
-                              <span class="stock">In stock: 98 </span>
-                            </div>
-                          </div>
-                    </div>        
-                <% } %>
-            </div>
+            <% typeProducts.forEach(product => { %>
+                <div class="tab-box">
+                    <h3><a href=""><%= product.name %></a></h3>
+                    <ul class="nav">
+                        <% product.details.forEach(detail => { %>
+                            <li class="nav-item"><a href=""><%= detail %></a></li>
+                        <% }); %>
+                        <li class="nav-item view-more"><a href=""><span>View more</span><i class="bi bi-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+                <div class="products row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                    <% product.products.forEach(item => { %>
+                        <% for(let i = 0; i < 5; i++) { %>
+                            <div class="col-md-4 col-sm-12 ">
+                                <div class="card">
+                                    <img src="<%= item.image %>" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h5 class="card-title fs-6"><%= item.title %></h5>
+                                      <p class="card-text price"><%= item.price %><span>/<%= item.unit%></span></p>
+                                      <div class="stock fs-6 p-1 mb-1 bg-success-subtle text-success"><span><i class="bi bi-check"></i>
+                                         In stock: <%= item.stock %></span></div>
+                                    </div>
+                                  </div>
+                            </div>        
+                        <% } %>
+                    <% }); %>
+                </div>
+            <% }); %>
         </div>
     </div>
 </div>

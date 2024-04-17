@@ -2,36 +2,13 @@
     <div class="container-fluid">
         <div class="product-type">
             <div class="row row-cols-2 row-cols-lg-6 g-2 g-lg-3">
-                <div class="col-md-4 col-sm-12">
-                    <button class="btn btn-primary active">
-                        <span>Active Stereo Camera</span>
-                    </button>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <button class="btn btn-primary">
-                        <span>Active Stereo Camera</span>
-                    </button>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <button class="btn btn-primary">
-                        <span>Active Stereo Camera</span>
-                    </button>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <button class="btn btn-primary">
-                        <span>Active Stereo Camera</span>
-                    </button>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <button class="btn btn-primary">
-                        <span>Active Stereo Camera</span>
-                    </button>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <button class="btn btn-primary">
-                        <span>Active Stereo Camera</span>
-                    </button>
-                </div>
+                <% typeProducts.forEach(type => { %>
+                    <div class="col-md-4 col-sm-12">
+                        <button class="btn btn-primary active">
+                            <span><%= type.name %></span>
+                        </button>
+                    </div>
+                <% }); %>
             </div>
         </div>
         <div id="product-slide" class="carousel carousel-dark slide">
@@ -39,58 +16,42 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="card mb-3 border-0">
-                            <div class="card-header fw-bold fs-2">LIPSedge™ AE400</div>
+                            <div class="card-header fw-bold fs-2"><%= typeProducts[0].products[0].title %></div>
                             <div class="card-body">
-                                <img src="/template/lips/img/product1.png" class="d-block w-100" alt="...">
-                                <p class="card-text fw-bold fs-3">Ruggedized Industrial 3D Depth Camera</p>
+                                <img src="<%= typeProducts[0].products[0].image %>" class="d-block w-100" alt="...">
+                                <p class="card-text fw-bold fs-3"><%= typeProducts[0].products[0].description %></p>
                             </div>
-                            <div class="card-footer"><span>FOV 87° x 58° x 95°</span>
+                            <div class="card-footer"><span>FOV <%= typeProducts[0].products[0].FOV %></span>
 
-                                <span>Global Shutter / IMU</span>
+                                <span><%= typeProducts[0].products[0].shutter %></span>
                                 
-                                <span>Range: 0.52 ~ 10+m</span></div>
+                                <span>Range: <%= typeProducts[0].products[0].range %></span></div>
                                 <div class="compare-buy">
                                     <a href="#" class="btn btn-secondary">Compare</a>
                                     <a href="#" class="btn btn-primary ms-2">Buy</a>
                                 </div>
                         </div>
                     </div>
+                    <% for( let i = 1; i < typeProducts[0].products.length; i++ ) { %>
                     <div class="carousel-item">
                         <div class="card mb-3">
-                            <div class="card-header fw-bold fs-2">LIPSedge™ AE400</div>
+                            <div class="card-header fw-bold fs-2"><%= typeProducts[0].products[i].title %></div>
                             <div class="card-body">
-                                <img src="/template/lips/img/product2.png" class="d-block w-100" alt="...">
-                                <p class="card-text fw-bold fs-3">Ruggedized Industrial 3D Depth Camera</p>
+                                <img src="<%= typeProducts[0].products[i].image %>" class="d-block w-100" alt="...">
+                                <p class="card-text fw-bold fs-3"><%= typeProducts[0].products[i].description %></p>
                             </div>
-                            <div class="card-footer"><span>FOV 87° x 58° x 95°</span>
+                            <div class="card-footer"><span>FOV <%= typeProducts[0].products[i].FOV %></span>
 
-                                <span>Global Shutter / IMU</span>
+                                <span><%= typeProducts[0].products[i].shutter %></span>
                                 
-                                <span>Range: 0.52 ~ 10+m</span></div>
+                                <span>Range: <%= typeProducts[0].products[i].range %></span></div>
                                 <div class="compare-buy">
                                     <a href="#" class="btn btn-secondary">Compare</a>
                                     <a href="#" class="btn btn-primary ms-2">Buy</a>
                                 </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="card mb-3">
-                            <div class="card-header fw-bold fs-2">LIPSedge™ AE400</div>
-                            <div class="card-body">
-                                <img src="/template/lips/img/product3.png" class="d-block w-100" alt="...">
-                                <p class="card-text fw-bold fs-3">Ruggedized Industrial 3D Depth Camera</p>
-                            </div>
-                            <div class="card-footer"><span>FOV 87° x 58° x 95°</span>
-
-                                <span>Global Shutter / IMU</span>
-                                
-                                <span>Range: 0.52 ~ 10+m</span></div>
-                            <div class="compare-buy">
-                                <a href="#" class="btn btn-secondary">Compare</a>
-                                <a href="#" class="btn btn-primary ms-2">Buy</a>
-                            </div>
-                        </div>
-                    </div>
+                    <% } %>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#product-slide"
                     data-bs-slide="prev">
