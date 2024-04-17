@@ -69,13 +69,18 @@ a{
 #product-slide{
     margin-top: 4rem;
     text-align: center;
+    .details{
+        display: flex;
+        justify-content: space-around;
+    }
     .compare-buy{
         display: flex;
         justify-content: center;
         a{
             margin-top: 1rem;
             padding: 0.3rem 1rem;
-            border-radius: 1rem;
+            min-height: 2.3rem;
+            min-width: 6.3rem;
         }
     }
 }

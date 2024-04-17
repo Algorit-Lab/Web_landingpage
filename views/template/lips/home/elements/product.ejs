@@ -12,43 +12,47 @@
             </div>
         </div>
         <div id="product-slide" class="carousel carousel-dark slide">
-            <div class="container-fluid" style="width: 60%;">
+            <div class="container-fluid" style="width: 80%;">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="card mb-3 border-0">
-                            <div class="card-header fw-bold fs-2"><%= typeProducts[0].products[0].title %></div>
+                            <div class="fw-bold fs-1"><%= typeProducts[0].products[0].title %></div>
                             <div class="card-body">
-                                <img src="<%= typeProducts[0].products[0].image %>" class="d-block w-100" alt="...">
-                                <p class="card-text fw-bold fs-3"><%= typeProducts[0].products[0].description %></p>
-                            </div>
-                            <div class="card-footer"><span>FOV <%= typeProducts[0].products[0].FOV %></span>
-
-                                <span><%= typeProducts[0].products[0].shutter %></span>
-                                
-                                <span>Range: <%= typeProducts[0].products[0].range %></span></div>
-                                <div class="compare-buy">
-                                    <a href="#" class="btn btn-secondary">Compare</a>
-                                    <a href="#" class="btn btn-primary ms-2">Buy</a>
+                                <div class="container-fluid" style="width: 70%;">
+                                    <img src="<%= typeProducts[0].products[0].image %>" class="d-block w-100" alt="...">
+                                    <p class="card-text fw-bold fs-3"><%= typeProducts[0].products[0].description %></p>
                                 </div>
+                            </div>
+                            <div class="details p-3 mb-2 fs-4 bg-info-subtle rounded-pill">
+                                <span>FOV <%= typeProducts[0].products[0].FOV %></span>
+                                <span><%= typeProducts[0].products[0].shutter %></span>
+                                <span>Range: <%= typeProducts[0].products[0].range %></span>
+                            </div>
+                            <div class="compare-buy">
+                                <a href="#" class="btn btn-secondary rounded-pill">Compare</a>
+                                <a href="#" class="btn btn-primary rounded-pill ms-2">Buy</a>
+                            </div>
                         </div>
                     </div>
                     <% for( let i = 1; i < typeProducts[0].products.length; i++ ) { %>
                     <div class="carousel-item">
-                        <div class="card mb-3">
-                            <div class="card-header fw-bold fs-2"><%= typeProducts[0].products[i].title %></div>
+                        <div class="card mb-3 border-0">
+                            <div class="fw-bold fs-1"><%= typeProducts[0].products[i].title %></div>
                             <div class="card-body">
-                                <img src="<%= typeProducts[0].products[i].image %>" class="d-block w-100" alt="...">
-                                <p class="card-text fw-bold fs-3"><%= typeProducts[0].products[i].description %></p>
-                            </div>
-                            <div class="card-footer"><span>FOV <%= typeProducts[0].products[i].FOV %></span>
-
-                                <span><%= typeProducts[0].products[i].shutter %></span>
-                                
-                                <span>Range: <%= typeProducts[0].products[i].range %></span></div>
-                                <div class="compare-buy">
-                                    <a href="#" class="btn btn-secondary">Compare</a>
-                                    <a href="#" class="btn btn-primary ms-2">Buy</a>
+                                <div class="container-fluid" style="width: 70%;">
+                                    <img src="<%= typeProducts[0].products[i].image %>" class="d-block w-100" alt="...">
+                                    <p class="card-text fw-bold fs-3"><%= typeProducts[0].products[i].description %></p>
                                 </div>
+                            </div>
+                            <div class="details p-3 mb-2 fs-4 bg-info-subtle rounded-pill">
+                                <span>FOV <%= typeProducts[0].products[i].FOV %></span>
+                                <span><%= typeProducts[0].products[i].shutter %></span>
+                                <span>Range: <%= typeProducts[0].products[i].range %></span>
+                            </div>
+                            <div class="compare-buy">
+                                <a href="#" class="btn btn-secondary">Compare</a>
+                                <a href="#" class="btn btn-primary ms-2">Buy</a>
+                            </div>
                         </div>
                     </div>
                     <% } %>
