@@ -1,0 +1,23 @@
+<div class="container-fluid partner page-bg-3 w-100">
+	<div class="partner-title text-center">
+		<h2>Our Partners</h2>
+		<div class="partner-descrption text-center">
+			There is our partners. There is our partners. There is our partners. There is our partners. There is our partners. There is our partners. There is our partners. There is our partners. There is our partners. There is our partners.
+		</div>
+	</div>
+	<div class="partner-slide">
+		<div class="partner-slide container-fluid">
+			<div class="partner-slider-items w-100">
+				<% partnerItems.forEach(card => { %>
+				<div class="card">
+					<img src="<%= card.img %>" class="card-img-top" alt="<%= card.brand %>">
+				</div>
+				<% }) %>
+			</div>
+		</div>
+		
+		<div class="partner-slider-controller">
+			<div class="row"></div>
+		</div>
+	</div>
+</div>
