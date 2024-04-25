@@ -89,7 +89,71 @@ router.get("/temas", (req, res) => {
             imageWhite: "/template/temas/img/trade_white.svg"
         }
     ]
-    res.render('template/temas/home/pages/home', { title: 'Temas', serviceItems: serviceItems, productItems: productItems });
+
+    partnerItems = [
+        {
+            img: "/layouts_admin/image/AlgoritLogo.png",
+            brand: "brand1"
+        },
+        {
+            img: "/layouts_admin/image/AlgoritLogoDark.png",
+            brand: "brand2"
+        },
+        {
+            img: "/layouts_admin/image/AlgoritLogo.png",
+            brand: "brand3"
+        },
+        {
+            img: "/layouts_admin/image/AlgoritLogoDark.png",
+            brand: "brand4"
+        },
+        {
+            img: "/layouts_admin/image/AlgoritLogo.png",
+            brand: "brand5"
+        },
+        {
+            img: "/layouts_admin/image/AlgoritLogoDark.png",
+            brand: "brand6"
+        },
+        {
+            img: "/layouts_admin/image/AlgoritLogo.png",
+            brand: "brand7"
+        },
+        {
+            img: "/layouts_admin/image/AlgoritLogoDark.png",
+            brand: "brand8"
+        },
+        {
+            img: "/layouts_admin/image/AlgoritLogo.png",
+            brand: "brand9"
+        },
+        {
+            img: "/layouts_admin/image/AlgoritLogoDark.png",
+            brand: "brand10"
+        },
+        {
+            img: "/layouts_admin/image/AlgoritLogo.png",
+            brand: "brand11"
+        },
+        {
+            img: "/layouts_admin/image/AlgoritLogoDark.png",
+            brand: "brand12"
+        },
+        {
+            img: "/layouts_admin/image/AlgoritLogo.png",
+            brand: "brand13"
+        },
+        {
+            img: "/layouts_admin/image/AlgoritLogoDark.png",
+            brand: "brand14"
+        },
+        {
+            img: "/layouts_admin/image/AlgoritLogo.png",
+            brand: "brand15"
+        }
+    ]
+
+    res.render('template/temas/home/pages/home', { title: 'Temas', serviceItems: serviceItems, productItems: productItems, partnerItems: partnerItems });
 });
 
 router.get("/thegioiic", (req, res) => {
