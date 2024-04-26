@@ -3,21 +3,25 @@
 		<div class="row">
 			<% serviceItems.forEach(function(item) { %>
 			<div class="col-4 col-lg-3 col-md-6 col-sm-12 service-item">
-				<div class="service-img-box">
-					<img loading="lazy" src="/template/temas/img/01_Giai_phap_robot.webp" class="service-img" alt="Giải pháp robot">
-				</div>
-				<div class="service-content-wrap">
-					<div class="title-cell">
-						<%= item.title %>
-					</div>
-					<div class="content-cell">
-						<%= item.description %>
-						<!-- Assuming 'description' is the key for service description in serviceItems -->
-					</div>
-					<div class="redirct-cell">
-						<a href="#">
-							<%= item.redirct_text %>
-						</a>
+				<div class="service-item-box">
+					<div class="service-content-box">
+						<div class="service-img-box">
+							<img loading="lazy" src="/template/temas/img/01_Giai_phap_robot.webp" class="service-img" alt="Giải pháp robot">
+						</div>
+						<div class="service-content-wrap">
+							<div class="title-cell">
+								<%= item.title %>
+							</div>
+							<div class="content-cell">
+								<%= item.description %>
+								<!-- Assuming 'description' is the key for service description in serviceItems -->
+							</div>
+							<div class="redirct-cell">
+								<a href="#">
+									<%= item.redirct_text %>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

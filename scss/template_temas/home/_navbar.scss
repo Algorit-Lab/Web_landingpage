@@ -166,6 +166,14 @@
         background-color: white;
     }
 
+    .nav-item .nav-link {
+        color: black;
+    }
+
+    .navbar-button .nav-link {
+        color: white;
+    }
+
     .navbar-1 {
         display: none;
     }
@@ -182,5 +190,13 @@
 @media (max-width: 950px) {
     .navbar {
         width: 100% !important;
+    }
+
+    .nav-item .nav-link {
+        color: black;
+    }
+
+    .navbar-button .nav-link {
+        color: white;
     }
 }

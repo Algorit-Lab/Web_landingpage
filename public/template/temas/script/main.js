@@ -52,8 +52,8 @@ $(document).ready(function () {
 
 // highlight blog
 $(document).ready(function () {
-    $slider = $('.hlBlog-items .row');
-    $slider.slick({
+    $slider_hlBlog = $('.hlBlog-items .row');
+    $slider_hlBlog.slick({
         dots: false,
         slidesToShow: 3,
         infinite: false,
@@ -72,28 +72,28 @@ $(document).ready(function () {
         }]
     });
 
-    var $dotsContainer = $('.hlBlog-slider-controller .row');
+    var $dotsContainer_hlBlog = $('.hlBlog-slider-controller .row');
     function setDots() {
-        var slidesCount = $slider.slick('getSlick').slideCount;
+        var slidesCount = $slider_hlBlog.slick('getSlick').slideCount;
         var cardPerRow = ($(window).width() <= 720) ? 1 : ($(window).width() < 950) ? 2 : 3;
-        $dotsContainer.empty();
+        $dotsContainer_hlBlog.empty();
         for (var i = 0; i < slidesCount; i += cardPerRow) {
             var $dot = $('<div class="hlBlog-slider-controller-button"></div>');
-            $dotsContainer.append($dot);
+            $dotsContainer_hlBlog.append($dot);
         }
 
         $slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-            $dotsContainer.find('.hlBlog-slider-controller-button').removeClass('active');
-            $dotsContainer.find('.hlBlog-slider-controller-button').eq(nextSlide).addClass('active');
+            $dotsContainer_hlBlog.find('.hlBlog-slider-controller-button').removeClass('active');
+            $dotsContainer_hlBlog.find('.hlBlog-slider-controller-button').eq(nextSlide).addClass('active');
         });
 
         // Initialize the active dot
-        $dotsContainer.find('.hlBlog-slider-controller-button').first().addClass('active');
+        $dotsContainer_hlBlog.find('.hlBlog-slider-controller-button').first().addClass('active');
 
         // Handle click on dots to navigate to slides
-        $dotsContainer.on('click', '.hlBlog-slider-controller-button', function () {
+        $dotsContainer_hlBlog.on('click', '.hlBlog-slider-controller-button', function () {
             var index = $(this).index();
-            $slider.slick('slickGoTo', index);
+            $slider_hlBlog.slick('slickGoTo', index);
         });
     }
     setDots();

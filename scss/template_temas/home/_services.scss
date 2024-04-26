@@ -19,11 +19,19 @@
 
 .services .service-item {
     height: 350px;
-    background-color: white;
     padding: 0;
-    margin: 10px .5%;
     width: 24%;
     min-width: 276px;
+}
+
+.services .service-item-box {
+    padding: 10px 2%;
+    width: 100%;
+} 
+
+.service-content-box {
+    width: 100%;
+    background-color: white;
 }
 
 .services .service-content-wrap {
