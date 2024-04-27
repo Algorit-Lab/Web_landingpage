@@ -7,4 +7,5 @@ scss/*.css
 scss/*.css.map
 scss/**/*.css
 scss/**/*.css.map
+!scss/css_source/*.css
 !public/image/upload/HOLDER
