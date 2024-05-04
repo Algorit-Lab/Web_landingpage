@@ -1,0 +1,19 @@
+.technologies {
+    .title{
+        margin-top: 2rem;
+        color: #062d64;
+        margin-bottom: 2rem;
+        font-weight: bold;
+    }
+    .card{
+        margin-bottom: 2rem;
+        h4{
+            margin-top: 1.5rem;
+            color: #062d64;
+        }
+        &:hover{
+            transform: scale(1.05);
+            transition: all .5s;
+        }
+    }
+}
