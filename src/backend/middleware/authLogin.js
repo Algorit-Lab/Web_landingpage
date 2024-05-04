@@ -1,23 +1,19 @@
 const isLogin = async (req, res, next) => {
-    console.log(req);
-    try{
-        if(req.session.user_id && req.session.is_admin == true) {
-            
-        } else{
-            res.redirect('/login');
+    try {
+        if (req.cookies.user_id && req.cookies.is_admin == true) {
+            next();
         }
-        next();
-    } catch(error){
+    } catch (error) {
         console.log(error.message);
     }
 }
-const isLogout = async(req, res, next) => {
-    try{
+const isLogout = async (req, res, next) => {
+    try {
         if(req.session.user_id && req.session.is_admin == true) {
             res.redirect('/dashboard');
         } 
         next();
-    } catch(error){
+    } catch (error) {
         console.log(error.message)
     }
 }

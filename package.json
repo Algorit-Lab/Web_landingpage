@@ -8,7 +8,7 @@
     "build_ckeditor": "cd ckeditor5 && npm install && npm run build",
     "build_scss": "sass src/frontend/scss:public/css --style compressed",
     "scss": "sass --watch src/frontend/scss:src/frontend/public/css --no-source-map",
-    "test": "npm run build_scss && concurrently \"npm run scss\" \"nodemon app.js\"",
+    "test": "npm run build_scss && concurrently \"npm run scss\" \"nodemon app.js\" \"nodemon server.js\"",
     "start": "node app.js"
   },
   "keywords": [],

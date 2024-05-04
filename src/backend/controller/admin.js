@@ -1,58 +1,106 @@
-const Admin = require('../models/blog/admin');
-const bcrypt = require('bcrypt');
+const fetch = require('node-fetch');
+const baseApi = "http://localhost:3005/api";
 
-const loadLogin = async(req, res)=>{
-    try{
-        res.render('admin/pages/login');
-    } catch(error){
-        console.log(error.message);
-    }
-}
-
-const verifyLogin = async(req, res)=>{
-    try{
-        const email = req.body.email;
-        const password = req.body.pass;
-        const adminData = await Admin.findOne({email:email});
-
-        if(adminData){
-            console.log("entry Check");
-            // const passwordMatch = (password == adminData.password);  
-            const hash = await bcrypt.hash(adminData.password, 10);
-            const passwordMatch = await bcrypt.compare(password, hash);
-            if(passwordMatch) {
-                if(adminData.is_admin == true){
-                    res.redirect('/admin/dashboard');
-                } else{
-                    res.redirect('admin/pages/login');
-                }
-            } else {
-                // res.render('admin/pages/login', {message:"Email or Password is incorrect!"});
-                console.log("Sai mat khau");
-            }
-        } else{
-            console.log("entry Check false");
-            res.render('admin/pages/login', {message:"Email or Password is incorrect!"});
-            console.log("Sai mat khau");
-        }
+const loadLogin = async (req, res) => {
+    try {
+        if (req.session?.isAuth && req.cookies?.torken)
+            res.redirect('dashboard')
+        else
+            res.render("admin/pages/login", { message: '' })
     } catch (error) {
         console.log(error.message);
     }
 }
 
-const admin = async(req, res)=>{
-    try{
-        res.render('admin/pages/dashboard');
-    } catch(error){
+const verifyLogin = async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        const response = await fetch(`${baseApi}/auth/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, password })
+        });
+
+        if (response.ok) {
+            const user = await response.json();
+            req.session.isAuth = true;
+            res.cookie('torken', user.torken, { maxAge: 60 * 1000 })
+                .cookie('username', user.name, { maxAge: 60 * 1000 })
+                .cookie('user_id', user.user_id, { maxAge: 60 * 1000 })
+                .redirect("dashboard");
+        } else {
+            throw response
+        }
+    } catch (error) {
+        switch (error.status) {
+            case 400:
+                {
+                    res.render('admin/pages/login', { message: "You don't have permission to access this! Contact at admin@gmail.com for help." })
+                    break;
+                }
+            case 401:
+                {
+                    res.render('admin/pages/login', { message: "Email not found!" })
+                    break;
+                }
+            case 402:
+                {
+                    res.render('admin/pages/login', { message: "Password is incorrect!" })
+                    break;
+                }
+            default:
+                break;
+        }
+
+    }
+}
+
+const admin = async (req, res) => {
+    try {
+        if (!req.cookies.torken || !req.session.isAuth) {
+            res.redirect("login");
+            return
+        }
+        res.render('admin/pages/dashboard', { username: req.cookies.username });
+    } catch (error) {
         console.log(error.message);
     }
 }
 
-const logout = async(req, res) => {
-    try{
-        res.session.destroy();
-        res.redirect('admin/pages/login');
-    } catch(error){
+const logout = async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        const response = await fetch(`${baseApi}/auth/login`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, password })
+        });
+
+        if (response.ok) {
+            const user = await response.json();
+            req.session.isAuth = true;
+            res.setHeader('Set-Cookie', `torken=${user.torken}; username=${user.name}; user_id=${user.user_id}; max-age:3600`)
+        } else {
+            throw response
+        }
+    } catch (error) {
+        console.log(error)
+    }
+
+    try {
+        req.session.destroy((err) => {
+            res.clearCookie('connect.sid');
+            res.clearCookie('torken');
+            res.clearCookie('username');
+            res.clearCookie('user_id');
+            if (err) throw err
+            res.redirect("login")
+        })
+    } catch (error) {
         console.log(error.message);
     }
 }

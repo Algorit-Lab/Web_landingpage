@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
+const cookieParser = require('cookie-parser')
 // const partials = require("express-partials");
 // const cookieParser = require("cookie-parser");
 // const ejs = require('ejs');
@@ -26,10 +27,6 @@ mongoose
         console.log(err);
     });
 
-app.get("/test/:postID", postController.getPostByID, async (req, res, next) => {
-    const post = req.post;
-});
-
 app.set("views", path.join(__dirname, "src", "frontend", "views"));
 app.set("view engine", "ejs");
 // app.use(partials());
@@ -38,6 +35,7 @@ app.use(express.json());
 // app.use(cookieParser());
 
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "src", "frontend", "public")));
 app.use(fileUpload());
 
@@ -51,5 +49,5 @@ app.use("/company", require("./src/backend/routes/company"));
 app.use("/template", require("./src/backend/routes/template"));
 app.use("/admin", require("./src/backend/routes/admin"));
 app.use("/error", (req, res) => {
-    res.render("home/pages/error", {title: "Error"})
+    res.render("home/pages/error", { title: "Error" })
 })

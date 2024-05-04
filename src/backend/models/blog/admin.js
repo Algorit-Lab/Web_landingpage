@@ -4,8 +4,9 @@ const adminSchema = new Schema({
     name: { type: String },
     email: { type: String },
     password: { type: String },
-    is_admin: { type: Boolean, default: false},
-    token : { type: String}
+    is_admin: { type: Boolean, default: false },
+    token: { type: String },
+    secretKey: { type: String }
 });
 
 module.exports = mongoose.model("admin", adminSchema, "admin");
