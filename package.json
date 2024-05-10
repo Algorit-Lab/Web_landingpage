@@ -7,6 +7,8 @@
     "install": "npm install express ejs body-parser mongoose mongodb nodemon body-parser bcrypt sass concurrently && npm run build_scss",
     "build_scss": "sass src/frontend/scss:src/frontend/public/css --style compressed",
     "scss": "sass --watch src/frontend/scss:src/frontend/public/css --no-source-map",
+    "w-nginx": "cd nginx && start nginx",
+    "w-nginx-r": "cd nginx && nginx -s reload",
     "test": "npm run build_scss && concurrently \"npm run scss\" \"nodemon app.js\" \"nodemon server.js\"",
     "start": "node app.js"
   },
