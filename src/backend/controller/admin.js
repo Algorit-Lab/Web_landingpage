@@ -1,5 +1,7 @@
 const fetch = require('node-fetch');
-const baseApi = "http://localhost:3005/api";
+const baseApi = "http://localhost:9090/apis"; //nginx port
+// const baseApi = "http://localhost:3005"; // outter server port
+// const baseApi = "http://localhost:3000/api"; // inner server port
 
 const loadLogin = async (req, res) => {
     try {

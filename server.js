@@ -4,10 +4,17 @@ const app = express()
 const port = 3005
 const Admin = require('./src/backend/models/blog/admin');
 const jwt_generate = require('./src/backend/util/jwt_generate');
+// const cors = require('cors');
+
 app.use(express.json());
-
 app.use(express.urlencoded({ extended: true }))
-
+// Configure CORS
+// app.use(cors({
+//     origin: 'http://localhost:2509', // Replace with your frontend's origin
+//     methods: ['POST', 'GET'], // Specify allowed HTTP methods
+//     allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
+//     maxAge: 600, // Set preflight cache time (in seconds)
+// }));
 mongoose
     .connect(
         "mongodb+srv://nguyenphilongit123:Long10092003@cluster0.pbxpwii.mongodb.net/blog"
@@ -19,10 +26,12 @@ mongoose
     .catch((err) => {
         console.log(err);
     });
-
-app.post('/api/auth/login', async (req, res) => {
+    
+app.post('/auth/login', async (req, res) => {
     try {
+        console.log("getiing logging")
         const { email, password } = await req.body;
+        if (!email || !password) res.status(400).json({ message: "Missing email or password!" });
         const adminData = await Admin.findOne({ email: email });
         if (adminData) {
             if (adminData.is_admin == true) {
@@ -49,8 +58,9 @@ app.post('/api/auth/login', async (req, res) => {
     }
 })
 
-app.post('/api/auth/logout', async (req, res) => {
+app.post('/auth/logout', async (req, res) => {
     try {
+        console.log("getiing logging")
         res.json({
             name: '',
             user_id: '',

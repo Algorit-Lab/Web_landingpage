@@ -4,9 +4,8 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "install": "npm install express ejs body-parser mongoose mongodb nodemon body-parser bcrypt sass concurrently && npm run build_ckeditor && npm run build_scss",
-    "build_ckeditor": "cd ckeditor5 && npm install && npm run build",
-    "build_scss": "sass src/frontend/scss:public/css --style compressed",
+    "install": "npm install express ejs body-parser mongoose mongodb nodemon body-parser bcrypt sass concurrently && npm run build_scss",
+    "build_scss": "sass src/frontend/scss:src/frontend/public/css --style compressed",
     "scss": "sass --watch src/frontend/scss:src/frontend/public/css --no-source-map",
     "test": "npm run build_scss && concurrently \"npm run scss\" \"nodemon app.js\" \"nodemon server.js\"",
     "start": "node app.js"
@@ -15,13 +14,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@ckeditor/ckeditor5-alignment": "^41.1.0",
-    "@ckeditor/ckeditor5-build-classic": "^41.1.0",
-    "@ckeditor/ckeditor5-highlight": "^41.1.0",
-    "@ckeditor/ckeditor5-image": "^41.1.0",
-    "@ckeditor/ckeditor5-remove-format": "^41.1.0",
-    "@ckeditor/ckeditor5-upload": "^41.1.0",
-    "@editorjs/editorjs": "^2.29.0",
     "aes-js": "^3.1.2",
     "axios": "^1.6.7",
     "bcrypt": "^5.1.1",
