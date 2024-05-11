@@ -1,10 +1,12 @@
 const fetch = require('node-fetch');
+const VisitorAPI = require("visitorapi");
 const baseApi = "http://localhost:9090/apis"; //nginx port
 // const baseApi = "http://localhost:3005"; // outter server port
 // const baseApi = "http://localhost:3000/api"; // inner server port
 
 const loadLogin = async (req, res) => {
     try {
+
         if (req.session?.isAuth && req.cookies?.torken)
             res.redirect('dashboard')
         else

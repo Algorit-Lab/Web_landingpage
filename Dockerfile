@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y nginx
 COPY nginx.conf /etc/nginx/nginx.conf
 
 # Expose port 80
-EXPOSE 80
+EXPOSE 9090
 
 # Start Nginx
-CMD service nginx start
+CMD service nginx start && npm start

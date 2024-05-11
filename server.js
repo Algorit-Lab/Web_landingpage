@@ -4,6 +4,10 @@ const app = express()
 const port = 3005
 const Admin = require('./src/backend/models/blog/admin');
 const jwt_generate = require('./src/backend/util/jwt_generate');
+
+const accessService = require('./src/backend/services/access');
+const locationService = require('./src/backend/services/location');
+const deviceService = require('./src/backend/services/devices');
 // const cors = require('cors');
 
 app.use(express.json());
@@ -26,7 +30,7 @@ mongoose
     .catch((err) => {
         console.log(err);
     });
-    
+
 app.post('/auth/login', async (req, res) => {
     try {
         console.log("getiing logging")
@@ -60,7 +64,6 @@ app.post('/auth/login', async (req, res) => {
 
 app.post('/auth/logout', async (req, res) => {
     try {
-        console.log("getiing logging")
         res.json({
             name: '',
             user_id: '',
@@ -71,3 +74,35 @@ app.post('/auth/logout', async (req, res) => {
         console.log(error.message);
     }
 })
+
+app.post("/userdata", async (req, res) => {
+    try {
+        const access = await accessService.createAccess({
+            ip: req.body.ipAddress,
+            browser: req.body.browser,
+            browserVersion: req.body.browserVersion,
+        });
+
+        const location = await locationService.createLocation({
+            ip: req.body.ipAddress,
+            country: req.body.countryCode,
+            countryName: req.body.countryName,
+            region: req.body.region,
+            regionName: req.body.city,
+            location: req.body.cityLatLong
+        });
+
+        const device = await deviceService.createDevice({
+            ip: req.body.ipAddress,
+            device: req.body.os,
+            deviceBrand: req.body.deviceBrand,
+            deviceModel: req.body.deviceModel,
+            deviceOSVersion: req.body.osVersion
+        });
+
+        res.json({ message: 'Data received', access, location, device });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'An error occurred' });
+    }
+});

@@ -6,6 +6,7 @@ public/image/upload/
 **/style.css
 *.css.map
 *.log
+**/nginx.pid
 
 !**/scss/css_source/*.css
 !public/image/upload/HOLDER

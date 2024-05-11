@@ -41,7 +41,8 @@
     "multer": "^1.4.5-lts.1",
     "nodemon": "^3.1.0",
     "request-promise": "^4.2.6",
-    "sass": "^1.74.1"
+    "sass": "^1.74.1",
+    "visitorapi": "^2.0.0"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",

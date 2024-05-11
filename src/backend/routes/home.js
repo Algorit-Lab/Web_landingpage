@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-var os = require('os');
+// var os = require('os');
 
 router.get("/", (req, res) => {
     const teasers = [
